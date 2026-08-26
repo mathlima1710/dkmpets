@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Canil DKM — Criação de Dachshund com registro na CBKC | Osasco, SP</title>
+<meta name="description" content="Canil DKM: criação responsável de Dachshund (Teckel) com afixo registrado na CBKC e acompanhamento no Kennel Club de São Paulo. História da raça, padrão oficial FCI nº 148, plantel, ninhadas e guia do novo tutor.">
+<meta name="keywords" content="canil Dachshund, Teckel, registro na CBKC, Kennel Club São Paulo, filhote de Dachshund, padrão FCI 148, criação responsável">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dkmpets.com.br/canil-dkm">
+<meta property="og:title" content="Canil DKM — Criação de Dachshund com registro na CBKC">
+<meta property="og:description" content="História, padrão oficial, plantel e ninhadas de Dachshund. Criação responsável em Osasco, SP.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<script async src="https://www.instagram.com/embed.js"></script>
+<style>
+body { margin: 0; background: #F7F0DC; font-family: 'PT Serif', Georgia, serif; color: #3A2208; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+a { color: #B4531D; text-decoration: none; }
+a:hover { color: #8A3D12; }
+[data-acc="0"] { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.2,.8,.2,1), opacity .3s ease; }
+[data-acc="1"] { max-height: 700px; opacity: 1; overflow: hidden; transition: max-height .45s cubic-bezier(.2,.8,.2,1), opacity .35s ease .05s; }
+@keyframes riseIn { from { opacity: 0; transform: translateY(28px) } to { opacity: 1; transform: none } }
+@keyframes slowPan { from { transform: scale(1.06) translateY(0) } to { transform: scale(1.16) translateY(-2%) } }
+@keyframes bobDown { 0%,100% { transform: translateY(0); opacity: .8 } 50% { transform: translateY(9px); opacity: .35 } }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Canil DKM","parentOrganization":{"@type":"LocalBusiness","name":"DKM Pets"},"url":"https://dkmpets.com.br/canil-dkm","description":"Criação responsável de Dachshund (Teckel) com registro na CBKC e acompanhamento no Kennel Club de São Paulo.","email":"contato@dkmpets.com.br","telephone":"+55 11 99271-5519","address":{"@type":"PostalAddress","addressLocality":"Osasco","addressRegion":"SP","addressCountry":"BR"}}
+</script>
+</helmet>
+
+<div style="position: fixed; top: 0; left: 0; right: 0; height: 3px; background: rgba(20, 12, 3, .12); z-index: 70">
+  <div style="{{ progressStyle }}"></div>
+</div>
+
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; padding: 12px clamp(20px, 5vw, 72px); background: rgba(24, 15, 4, .92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(250, 217, 31, .18)">
+  <a href="./DKM Pets.dc.html" aria-label="DKM Pets — página inicial" style="display: flex; align-items: center; gap: 14px">
+    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=160,fit=crop/YZ9VzLDaD2IxW987/img_9317-fotor-bg-remover-20241030213137-A85wLrzykqF4M895.png" alt="Logo da DKM Pets" width="50" height="50" style="width: 50px; height: 50px; object-fit: contain">
+    <span style="display: flex; align-items: center; gap: 11px; padding-left: 14px; border-left: 1px solid rgba(250, 217, 31, .28)">
+      <span style="font-family: 'Volkhov', Georgia, serif; font-weight: 700; font-size: 22px; line-height: 1; color: #FFFDF2">DKM</span>
+      <span style="font-family: 'Volkhov', Georgia, serif; font-size: 11.5px; line-height: 1; letter-spacing: .34em; text-transform: uppercase; color: #FAD91F">Canil</span>
+    </span>
+  </a>
+  <nav aria-label="Seções do canil" style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); flex-wrap: wrap; justify-content: flex-end">
+    <a href="#historia" style="font-size: 14.5px; font-weight: 700; color: rgba(255, 253, 242, .8)" style-hover="color: #FAD91F">História</a>
+    <a href="#padrao" style="font-size: 14.5px; font-weight: 700; color: rgba(255, 253, 242, .8)" style-hover="color: #FAD91F">Padrão oficial</a>
+    <a href="#plantel" style="font-size: 14.5px; font-weight: 700; color: rgba(255, 253, 242, .8)" style-hover="color: #FAD91F">Plantel</a>
+    <a href="#ninhadas" style="font-size: 14.5px; font-weight: 700; color: rgba(255, 253, 242, .8)" style-hover="color: #FAD91F">Ninhadas</a>
+    <a href="#cinofilia" style="font-size: 14.5px; font-weight: 700; color: rgba(255, 253, 242, .8)" style-hover="color: #FAD91F">Cinofilia</a>
+    <a href="#instagram" style="font-size: 14.5px; font-weight: 700; color: rgba(255, 253, 242, .8)" style-hover="color: #FAD91F">Instagram</a>
+    <a href="./DKM Pets.dc.html" style="font-size: 14.5px; font-weight: 700; color: rgba(255, 253, 242, .55)" style-hover="color: #FAD91F">DKM Pets ↗</a>
+    <a href="https://api.whatsapp.com/send?phone=5511992715519&amp;text=Oi,%20Kau%C3%A3!%20Quero%20saber%20sobre%20os%20filhotes%20do%20Canil%20DKM." target="_blank" rel="noopener" style="padding: 12px 22px; border-radius: 999px; background: #FAD91F; color: #3A2208; font-size: 15px; font-weight: 700" style-hover="background: #FFE768; color: #3A2208">Reservar filhote</a>
+  </nav>
+</header>
+<div style="{{ espacoTopo }}"></div>
+
+<section data-screen-label="Portal" style="position: relative; min-height: 92vh; display: flex; align-items: flex-end; overflow: hidden; padding: clamp(52px, 8vw, 120px) clamp(20px, 5vw, 72px) clamp(56px, 6vw, 88px)">
+  <video src="assets/peter-edit.mp4" data-autoplay="1" muted="{{ true }}" playsinline="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: slowPan 30s ease-in-out infinite alternate"></video>
+  <div style="position: absolute; inset: 0; background: linear-gradient(112deg, rgba(20, 12, 3, .94) 0%, rgba(20, 12, 3, .74) 46%, rgba(20, 12, 3, .88) 100%)"></div>
+  <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20, 12, 3, .92) 0%, rgba(20, 12, 3, .55) 42%, rgba(20, 12, 3, .3) 100%)"></div>
+  <div style="position: relative; width: 100%; max-width: 1340px; margin: 0 auto; display: grid; gap: 26px">
+    <span data-reveal style="display: inline-flex; align-items: center; gap: 12px; width: fit-content; padding: 9px 18px; border: 1px solid rgba(250, 217, 31, .5); border-radius: 999px; color: #FAD91F; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase">Canil DKM • Registro na CBKC</span>
+    <h1 data-reveal style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(40px, 7vw, 100px); line-height: .98; color: #FFFDF2; max-width: 17ch; text-wrap: pretty">Bem-vindo ao território <em style="font-style: italic; color: #FAD91F">Dachshund</em></h1>
+    <p data-reveal style="margin: 0; max-width: 60ch; font-size: clamp(17px, 1.5vw, 22px); line-height: 1.6; color: rgba(255, 253, 242, .88)">Um cão criado para descer onde ninguém desce. Aqui você atravessa a raça de ponta a ponta. De origem alemã, padrão oficial da FCI, nosso plantel e o caminho até o seu filhote.</p>
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 14px">
+      <a href="#plantel" style="padding: 17px 32px; border-radius: 999px; background: #FAD91F; color: #3A2208; font-weight: 700; font-size: 17px" style-hover="background: #FFE768; color: #3A2208">Conhecer o plantel</a>
+      <a href="#ninhadas" style="padding: 17px 32px; border-radius: 999px; border: 1px solid rgba(255, 253, 242, .45); color: #FFFDF2; font-size: 17px" style-hover="border-color: #FAD91F; color: #FAD91F">Ninhadas e reserva</a>
+    </div>
+    <span aria-hidden="true" style="margin-top: 12px; width: 22px; height: 34px; border: 1px solid rgba(255, 253, 242, .35); border-radius: 999px; display: flex; align-items: flex-start; justify-content: center; padding-top: 6px">
+      <span style="width: 3px; height: 8px; border-radius: 999px; background: #FAD91F; animation: bobDown 2s ease-in-out infinite"></span>
+    </span>
+  </div>
+</section>
+
+<section aria-label="Registros" style="padding: 26px clamp(20px, 5vw, 72px); background: #241705">
+  <div style="max-width: 1340px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+    <p style="margin: 0; max-width: 52ch; font-size: 15px; line-height: 1.65; color: rgba(255, 253, 242, .82)">Criação com <strong style="color: #FAD91F"> registro na CBKC</strong> — Confederação Brasileira de Cinofilia — e acompanhamento junto ao Kennel Club de São Paulo, entidade filiada.</p>
+    <div style="display: flex; align-items: center; gap: 22px">
+      <img src="assets/cbkc.png" alt="Logo da CBKC — Confederação Brasileira de Cinofilia" loading="lazy" style="height: 64px; width: auto; object-fit: contain">
+      <img src="assets/kcsp.png" alt="Logo do Kennel Club de São Paulo" loading="lazy" style="height: 60px; width: auto; object-fit: contain">
+    </div>
+  </div>
+</section>
+
+<section aria-label="Ficha da raça" style="padding: clamp(56px, 7vw, 104px) clamp(20px, 5vw, 72px); background: #F7F0DC">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 34px">
+    <div data-reveal style="display: grid; gap: 13px; max-width: 56ch">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Passaporte da raça</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.1; color: #3A2208">O essencial antes de desbravar</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(212px, 1fr)); gap: 18px">
+      <sc-for list="{{ ficha }}" as="f" hint-placeholder-count="6">
+        <div data-reveal style="display: grid; gap: 8px; align-content: start; padding: 24px 22px; background: #FFFDF2; border: 1px solid rgba(105, 53, 9, .13); border-radius: 18px">
+          <span style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #B4531D">{{ f.rotulo }}</span>
+          <strong style="font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: 21px; line-height: 1.25; color: #3A2208">{{ f.valor }}</strong>
+          <span style="font-size: 14.5px; line-height: 1.6; color: #6B4A1E">{{ f.nota }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="historia" data-screen-label="História" style="scroll-margin-top: 150px; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #241705; color: #FFFDF2">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 40px">
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: end; justify-content: space-between">
+      <div data-reveal style="display: grid; gap: 16px; max-width: 58ch">
+        <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #FAD91F">Expedição histórica</span>
+        <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.8vw, 52px); line-height: 1.08; color: #FFFDF2">Da toca do texugo ao ringue de exposição</h2>
+        <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: rgba(255, 253, 242, .82)">A trajetória do Teckel é uma das mais documentadas da cinofilia alemã: uma função de caça que virou tipo, o tipo que virou padrão e o padrão que virou uma das raças mais reconhecidas do mundo.</p>
+      </div>
+      <div style="display: flex; gap: 10px">
+        <button type="button" onClick="{{ voltarLinha }}" aria-label="Marcos anteriores" style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(250, 217, 31, .4); background: transparent; color: #FAD91F; font-size: 18px; cursor: pointer" style-hover="background: rgba(250, 217, 31, .16)">←</button>
+        <button type="button" onClick="{{ avancarLinha }}" aria-label="Próximos marcos" style="width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(250, 217, 31, .4); background: transparent; color: #FAD91F; font-size: 18px; cursor: pointer" style-hover="background: rgba(250, 217, 31, .16)">→</button>
+      </div>
+    </div>
+    <div ref="{{ linhaRef }}" style="display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 12px">
+      <sc-for list="{{ marcos }}" as="m" hint-placeholder-count="7">
+        <article style="flex: 0 0 clamp(268px, 30vw, 360px); display: grid; gap: 13px; align-content: start; padding: 30px 26px; border: 1px solid rgba(250, 217, 31, .24); border-radius: 22px; background: rgba(255, 253, 242, .045); transition: background .4s ease, border-color .4s ease, transform .4s ease" style-hover="background: rgba(255, 253, 242, .085); border-color: rgba(250, 217, 31, .55); transform: translateY(-6px)">
+          <strong style="font-family: 'Volkhov', Georgia, serif; font-size: 26px; color: #FAD91F">{{ m.quando }}</strong>
+          <h3 style="margin: 0; font-size: 18px; color: #FFFDF2">{{ m.titulo }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.72; color: rgba(255, 253, 242, .8)">{{ m.texto }}</p>
+        </article>
+      </sc-for>
+    </div>
+    <p style="margin: 0; font-size: 13.5px; color: rgba(255, 253, 242, .5)">Arraste para o lado ou use as setas para percorrer a linha do tempo.</p>
+  </div>
+</section>
+
+<section id="padrao" data-screen-label="Padrão oficial" style="scroll-margin-top: 150px; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #FFFDF2">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 42px">
+    <div data-reveal style="display: grid; gap: 16px; max-width: 62ch">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Padrão oficial • FCI nº 148</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.6vw, 50px); line-height: 1.1; color: #3A2208">Um cão, nove combinações</h2>
+      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: #6B4A1E">O Dachshund é reconhecido em três tamanhos e três pelagens — e a combinação entre eles define nove variedades oficiais. O tamanho não é medido pela altura, mas pela circunferência do tórax.</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px">
+      <sc-for list="{{ abas }}" as="a" hint-placeholder-count="2">
+        <button type="button" onClick="{{ a.onClick }}" style="{{ a.style }}">{{ a.label }}</button>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(276px, 1fr)); gap: 20px">
+      <sc-for list="{{ variedades }}" as="v" hint-placeholder-count="3">
+        <article style="display: grid; gap: 12px; align-content: start; padding: 30px 26px; background: #F7F0DC; border: 1px solid rgba(105, 53, 9, .13); border-radius: 22px; transition: transform .4s ease, box-shadow .4s ease" style-hover="transform: translateY(-7px); box-shadow: 0 40px 70px -48px rgba(58, 34, 8, .9)">
+          <span style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #B4531D">{{ v.tipo }}</span>
+          <h3 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: 26px; color: #3A2208">{{ v.nome }}</h3>
+          <strong style="font-size: 16px; color: #B4531D">{{ v.medida }}</strong>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.72; color: #6B4A1E">{{ v.texto }}</p>
+        </article>
+      </sc-for>
+    </div>
+    <div data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; padding-top: 10px; border-top: 1px solid rgba(105, 53, 9, .14)">
+      <sc-for list="{{ pontosPadrao }}" as="p" hint-placeholder-count="4">
+        <div style="display: grid; gap: 9px; align-content: start">
+          <strong style="font-size: 16.5px; color: #3A2208">{{ p.titulo }}</strong>
+          <span style="font-size: 15.5px; line-height: 1.7; color: #6B4A1E">{{ p.texto }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="plantel" data-screen-label="Plantel" style="scroll-margin-top: 150px; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #F7F0DC">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 44px">
+    <div data-reveal style="display: grid; gap: 15px; max-width: 58ch">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Plantel</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.6vw, 50px); line-height: 1.1; color: #3A2208">Peter Schwartz'Hause</h2>
+      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: #6B4A1E">Dachshund de pelo longo vermelho, um dos futuros pais do Canil DKM. Cresceu dentro do nosso método de adestramento — socialização de rua, condução na guia e obediência antes de qualquer plano de criação.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(24px, 3vw, 44px); align-items: start">
+      <button type="button" onClick="{{ verPeter }}" data-reveal title="Ampliar foto do Peter" style="padding: 0; border: none; background: transparent; border-radius: 26px; overflow: hidden; cursor: zoom-in">
+        <img src="assets/peter-9.jpeg" alt="Peter Schwartz'Hause, Dachshund de pelo longo vermelho, deitado na calçada durante o passeio" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.2,.8,.2,1)" style-hover="transform: scale(1.05)">
+      </button>
+      <div data-reveal style="display: grid; gap: 20px">
+        <div style="display: grid; gap: 12px">
+          <sc-for list="{{ fichaPeter }}" as="p" hint-placeholder-count="5">
+            <div style="display: flex; justify-content: space-between; gap: 18px; padding-bottom: 11px; border-bottom: 1px solid rgba(105, 53, 9, .14)">
+              <span style="font-size: 14px; letter-spacing: .1em; text-transform: uppercase; color: #B4531D">{{ p.rotulo }}</span>
+              <strong style="font-size: 16px; text-align: right; color: #3A2208">{{ p.valor }}</strong>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px">
+          <img src="assets/peter-11.jpeg" alt="Peter durante sessão de adestramento" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px">
+          <img src="assets/peter-12.jpeg" alt="Peter em treino de condução na guia" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px">
+        </div>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.72; color: #6B4A1E">Antes de entrar em qualquer programa de criação, um cão precisa provar temperamento em ambiente real: rua, barulho, outros cães e manejo. É o que os vídeos abaixo registram.</p>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(276px, 1fr)); gap: 18px">
+      <sc-for list="{{ videosPeter }}" as="v" hint-placeholder-count="4">
+        <figure style="margin: 0; display: grid; gap: 12px; padding: 16px; background: #FFFDF2; border: 1px solid rgba(105, 53, 9, .13); border-radius: 20px">
+          <video src="{{ v.src }}" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsinline="{{ true }}" style="width: 100%; max-height: 560px; border-radius: 14px; background: #241705"></video>
+          <figcaption style="font-size: 14.5px; line-height: 1.6; color: #6B4A1E">{{ v.legenda }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="ninhadas" data-screen-label="Ninhadas" style="scroll-margin-top: 150px; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #241705; color: #FFFDF2">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 42px">
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 22px; align-items: end; justify-content: space-between">
+      <div style="display: grid; gap: 15px; max-width: 56ch">
+        <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #FAD91F">Ninhadas</span>
+        <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.6vw, 50px); line-height: 1.1; color: #FFFDF2">Filhotes nascidos e criados dentro de casa</h2>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5511992715519&amp;text=Oi,%20Kau%C3%A3!%20Quero%20entrar%20na%20lista%20de%20espera%20de%20filhotes%20do%20Canil%20DKM." target="_blank" rel="noopener" style="padding: 16px 30px; border-radius: 999px; background: #FAD91F; color: #3A2208; font-weight: 700" style-hover="background: #FFE768; color: #3A2208">Entrar na lista de espera</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(216px, 1fr)); gap: 16px">
+      <sc-for list="{{ filhotes }}" as="g" hint-placeholder-count="4">
+        <button type="button" onClick="{{ g.onClick }}" title="Ampliar imagem" data-reveal style="padding: 0; border: none; background: rgba(255, 253, 242, .06); border-radius: 20px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 5">
+          <img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.8,.2,1)" style-hover="transform: scale(1.07)">
+        </button>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding-top: 12px; border-top: 1px solid rgba(250, 217, 31, .2)">
+      <sc-for list="{{ etapas }}" as="e" hint-placeholder-count="6">
+        <div data-reveal style="display: grid; gap: 10px; align-content: start">
+          <strong style="font-family: 'Volkhov', Georgia, serif; font-size: 20px; color: #FAD91F">{{ e.passo }}</strong>
+          <h3 style="margin: 0; font-size: 17px; color: #FFFDF2">{{ e.titulo }}</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: rgba(255, 253, 242, .78)">{{ e.texto }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="saude" data-screen-label="Saúde de coluna" style="scroll-margin-top: 150px; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #FFFDF2">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: clamp(28px, 4vw, 60px); align-items: center">
+    <div data-reveal style="display: grid; gap: 20px">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Saúde e manejo</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.1; color: #3A2208">O corpo longo pede manejo consciente</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #6B4A1E">A conformação condrodistrófica do Dachshund traz predisposição a problemas de disco intervertebral. Nada disso impede uma vida ativa e longa, desde que o tutor saiba o que evitar desde o primeiro dia. Orientamos cada família na entrega e seguimos disponíveis depois dela.</p>
+      <div style="display: grid; gap: 12px">
+        <sc-for list="{{ cuidados }}" as="c" hint-placeholder-count="5">
+          <div style="display: flex; gap: 13px; align-items: flex-start; font-size: 16px; line-height: 1.65; color: #3A2208">
+            <span style="flex: 0 0 auto; margin-top: 7px; width: 9px; height: 9px; border-radius: 50%; background: #FAD91F"></span>
+            <span>{{ c }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #8A6634">Orientação de manejo, não substitui avaliação veterinária individual.</p>
+    </div>
+    <figure data-reveal style="margin: 0; display: grid; gap: 12px; padding: 18px; background: #F7F0DC; border: 1px solid rgba(105, 53, 9, .13); border-radius: 24px">
+      <video src="assets/passeio-guia-16.mp4" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsinline="{{ true }}" style="width: 100%; max-height: 620px; border-radius: 16px; background: #241705"></video>
+      <figcaption style="font-size: 14.5px; line-height: 1.6; color: #6B4A1E">Passeio conduzido na guia, junto de outros cães — exercício regular e sem impacto é o melhor aliado da coluna.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="cinofilia" data-screen-label="Cinofilia" style="scroll-margin-top: 150px; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #F7F0DC">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 40px">
+    <div data-reveal style="display: grid; gap: 15px; max-width: 60ch">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Cinofilia na prática</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.6vw, 50px); line-height: 1.1; color: #3A2208">O vocabulário que separa criação de venda</h2>
+      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: #6B4A1E">Três termos aparecem em toda conversa séria sobre filhote com registro. Entender o que cada um significa é a melhor proteção do comprador.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
+      <sc-for list="{{ termos }}" as="t" hint-placeholder-count="4">
+        <article data-reveal style="display: grid; gap: 12px; align-content: start; padding: 30px 26px; background: #FFFDF2; border: 1px solid rgba(105, 53, 9, .13); border-radius: 22px">
+          <h3 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: 25px; color: #3A2208">{{ t.termo }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.72; color: #6B4A1E">{{ t.texto }}</p>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="tutor" data-screen-label="Guia do tutor" style="scroll-margin-top: 150px; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #FFFDF2">
+  <div style="max-width: 1040px; margin: 0 auto; display: grid; gap: 34px">
+    <div data-reveal style="display: grid; gap: 15px">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Guia do novo tutor</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.1; color: #3A2208">O que preparar antes do filhote chegar</h2>
+    </div>
+    <div style="display: grid; gap: 12px">
+      <sc-for list="{{ guia }}" as="g" hint-placeholder-count="5">
+        <div style="padding: 4px 26px; background: #F7F0DC; border: 1px solid rgba(105, 53, 9, .13); border-radius: 18px">
+          <button type="button" onClick="{{ g.onClick }}" aria-expanded="{{ g.expanded }}" style="display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; padding: 23px 0; border: none; background: transparent; text-align: left; cursor: pointer; font-size: 18px; font-weight: 700; color: #3A2208">
+            {{ g.titulo }}
+            <span style="{{ g.iconStyle }}">+</span>
+          </button>
+          <div data-acc="{{ g.acc }}">
+            <p style="margin: 0; padding-bottom: 23px; font-size: 16px; line-height: 1.75; color: #6B4A1E">{{ g.texto }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="instagram" data-screen-label="Instagram" style="padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #F7F0DC">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 36px">
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 22px; align-items: end; justify-content: space-between">
+      <div style="display: grid; gap: 14px; max-width: 54ch">
+        <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">No Instagram</span>
+        <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.6vw, 50px); line-height: 1.1; color: #3A2208">O canil por dentro, em @canil_dkm</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.7; color: #6B4A1E">Plantel, ninhadas e o crescimento dos filhotes registrados semana a semana.</p>
+      </div>
+      <a href="https://www.instagram.com/canil_dkm" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 11px; padding: 15px 28px; border-radius: 999px; background: #241705; color: #FFFDF2; font-weight: 700; font-size: 16px" style-hover="background: #FAD91F; color: #3A2208"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.0027 5.84808C8.59743 5.84808 5.85075 8.59477 5.85075 12C5.85075 15.4053 8.59743 18.1519 12.0027 18.1519C15.4079 18.1519 18.1546 15.4053 18.1546 12C18.1546 8.59477 15.4079 5.84808 12.0027 5.84808ZM12.0027 15.9996C9.80212 15.9996 8.00312 14.2059 8.00312 12C8.00312 9.7941 9.79677 8.00046 12.0027 8.00046C14.2086 8.00046 16.0022 9.7941 16.0022 12C16.0022 14.2059 14.2032 15.9996 12.0027 15.9996ZM19.8412 5.59644C19.8412 6.39421 19.1987 7.03135 18.4062 7.03135C17.6085 7.03135 16.9713 6.38885 16.9713 5.59644C16.9713 4.80402 17.6138 4.16153 18.4062 4.16153C19.1987 4.16153 19.8412 4.80402 19.8412 5.59644ZM23.9157 7.05277C23.8247 5.13063 23.3856 3.42801 21.9775 2.02522C20.5747 0.622429 18.8721 0.183388 16.9499 0.0870135C14.9689 -0.0254238 9.03112 -0.0254238 7.05008 0.0870135C5.1333 0.178034 3.43068 0.617075 2.02253 2.01986C0.614389 3.42265 0.180703 5.12527 0.0843279 7.04742C-0.0281093 9.02845 -0.0281093 14.9662 0.0843279 16.9472C0.175349 18.8694 0.614389 20.572 2.02253 21.9748C3.43068 23.3776 5.12794 23.8166 7.05008 23.913C9.03112 24.0254 14.9689 24.0254 16.9499 23.913C18.8721 23.822 20.5747 23.3829 21.9775 21.9748C23.3803 20.572 23.8193 18.8694 23.9157 16.9472C24.0281 14.9662 24.0281 9.03381 23.9157 7.05277ZM21.3564 19.0728C20.9388 20.1223 20.1303 20.9307 19.0755 21.3537C17.496 21.9802 13.7481 21.8356 12.0027 21.8356C10.2572 21.8356 6.50396 21.9748 4.92984 21.3537C3.88042 20.9361 3.07195 20.1276 2.64897 19.0728C2.02253 17.4934 2.16709 13.7455 2.16709 12C2.16709 10.2546 2.02789 6.50129 2.64897 4.92717C3.06659 3.87776 3.87507 3.06928 4.92984 2.6463C6.50931 2.01986 10.2572 2.16443 12.0027 2.16443C13.7481 2.16443 17.5014 2.02522 19.0755 2.6463C20.1249 3.06392 20.9334 3.8724 21.3564 4.92717C21.9828 6.50665 21.8383 10.2546 21.8383 12C21.8383 13.7455 21.9828 17.4987 21.3564 19.0728Z"></path></svg>Seguir o canil</a>
+    </div>
+    <div ref="{{ feedRef }}" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start">
+      {{ feedEmbeds }}
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Convite" style="position: relative; overflow: hidden; padding: clamp(64px, 8vw, 124px) clamp(20px, 5vw, 72px); background: #241705; color: #FFFDF2">
+  <div style="max-width: 1040px; margin: 0 auto; display: grid; gap: 24px; justify-items: center; text-align: center">
+    <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #FAD91F">Canil DKM</span>
+    <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 4vw, 56px); line-height: 1.08; color: #FFFDF2; max-width: 24ch">Conheça o canil antes de escolher o filhote</h2>
+    <p style="margin: 0; max-width: 56ch; font-size: 17.5px; line-height: 1.7; color: rgba(255, 253, 242, .82)">Chamada de vídeo, visita agendada, histórico dos pais e todas as perguntas que você quiser fazer. Criação responsável se mostra de perto.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center">
+      <a href="https://api.whatsapp.com/send?phone=5511992715519&amp;text=Oi,%20Kau%C3%A3!%20Quero%20conhecer%20o%20Canil%20DKM%20e%20saber%20das%20pr%C3%B3ximas%20ninhadas." target="_blank" rel="noopener" style="padding: 17px 32px; border-radius: 999px; background: #FAD91F; color: #3A2208; font-weight: 700; font-size: 17px" style-hover="background: #FFE768; color: #3A2208">Falar com o Kauã</a>
+      <a href="./DKM Pets.dc.html" style="padding: 17px 32px; border-radius: 999px; border: 1px solid rgba(255, 253, 242, .45); color: #FFFDF2; font-size: 17px" style-hover="border-color: #FAD91F; color: #FAD91F">Voltar para DKM Pets</a>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ lightbox }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Imagem ampliada" onClick="{{ fechar }}" style="position: fixed; inset: 0; z-index: 95; display: flex; align-items: center; justify-content: center; padding: 4vw; background: rgba(20, 12, 3, .92); backdrop-filter: blur(8px); cursor: zoom-out">
+    {{ lightboxImg }}
+    <button type="button" onClick="{{ fechar }}" aria-label="Fechar" style="position: absolute; top: 26px; right: 30px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255, 253, 242, .38); background: transparent; color: #FFFDF2; font-size: 20px; cursor: pointer">✕</button>
+  </div>
+</sc-if>
+
+<footer style="padding: clamp(44px, 5vw, 68px) clamp(20px, 5vw, 72px) 34px; background: #1B1104; color: rgba(255, 253, 242, .7)">
+  <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: 30px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px">
+      <div style="display: grid; gap: 12px; align-content: start">
+        <span style="display: flex; align-items: center; gap: 11px">
+          <span style="font-family: 'Volkhov', Georgia, serif; font-weight: 700; font-size: 21px; color: #FFFDF2">DKM</span>
+          <span style="font-family: 'Volkhov', Georgia, serif; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #FAD91F">Canil</span>
+        </span>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7">Criação responsável de Dachshund em Osasco — SP, com registro na CBKC e acompanhamento no Kennel Club de São Paulo.</p>
+      </div>
+      <div style="display: grid; gap: 9px; align-content: start; font-size: 14.5px">
+        <strong style="color: #FFFDF2; font-family: 'Volkhov', Georgia, serif; font-weight: 400">Nesta página</strong>
+        <a href="#historia" style="color: rgba(255, 253, 242, .7)" style-hover="color: #FAD91F">História da raça</a>
+        <a href="#padrao" style="color: rgba(255, 253, 242, .7)" style-hover="color: #FAD91F">Padrão oficial</a>
+        <a href="#plantel" style="color: rgba(255, 253, 242, .7)" style-hover="color: #FAD91F">Plantel</a>
+        <a href="#tutor" style="color: rgba(255, 253, 242, .7)" style-hover="color: #FAD91F">Guia do novo tutor</a>
+      </div>
+      <div style="display: grid; gap: 9px; align-content: start; font-size: 14.5px">
+        <strong style="color: #FFFDF2; font-family: 'Volkhov', Georgia, serif; font-weight: 400">Contato</strong>
+        <a href="mailto:contato@dkmpets.com.br" style="color: rgba(255, 253, 242, .7)" style-hover="color: #FAD91F">contato@dkmpets.com.br</a>
+        <a href="tel:+5511992715519" style="color: rgba(255, 253, 242, .7)" style-hover="color: #FAD91F">+55 11 99271-5519</a>
+        <a href="https://www.instagram.com/dkmpets" target="_blank" rel="noopener" style="color: rgba(255, 253, 242, .7)" style-hover="color: #FAD91F">Instagram</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; padding-top: 20px; border-top: 1px solid rgba(255, 253, 242, .14); font-size: 13px">
+      <span>© 2026 DKM Pets — Canil DKM. Todos os direitos reservados.</span>
+      <span>Criar bem é criar com registro.</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FAD91F&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#FAD91F&quot;,&quot;#E8A317&quot;,&quot;#B4531D&quot;,&quot;#C9761B&quot;],&quot;section&quot;:&quot;Marca&quot;},&quot;instagramPosts&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Instagram&quot;}}">
+class Component extends DCLogic {
+  state = { progress: 0, aba: 'Tamanhos', guiaAbertos: [], lightbox: null, lightboxAlt: '', headerH: 88 };
+
+  medirHeader() {
+    const h = document.querySelector('header');
+    if (h && Math.abs(h.offsetHeight - this.state.headerH) > 1) this.setState({ headerH: h.offsetHeight });
+  }
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+      if (Math.abs(progress - this.state.progress) > 0.004) this.setState({ progress });
+    };
+    this.onKey = (e) => { if (e.key === 'Escape') this.setState({ lightbox: null }); };
+    this.onResize = () => this.medirHeader();
+    this.onScrollSafety = () => {
+      const nodes = document.querySelectorAll('[data-reveal]');
+      for (let i = 0; i < nodes.length; i++) {
+        const el = nodes[i];
+        if (el.style.opacity !== '0') continue;
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.style.animation = 'riseIn .85s cubic-bezier(.2,.85,.2,1) both';
+          el.style.opacity = '';
+        }
+      }
+    };
+    window.addEventListener('scroll', this.onScrollSafety, { passive: true });
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('keydown', this.onKey);
+    window.addEventListener('resize', this.onResize);
+    this.medirHeader();
+    setTimeout(() => this.medirHeader(), 400);
+    this.setupReveal();
+    this.silenciarVideos();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.onScrollSafety);
+    window.removeEventListener('keydown', this.onKey);
+    window.removeEventListener('resize', this.onResize);
+    if (this.io) this.io.disconnect();
+  }
+
+  setupReveal() {
+    if (typeof IntersectionObserver !== 'function') return;
+    if (this.io) this.io.disconnect();
+    setTimeout(() => {
+      const alvos = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+      this.io = new IntersectionObserver((entradas) => {
+        entradas.forEach((en) => {
+          const passou = en.boundingClientRect.top < window.innerHeight;
+          if (!en.isIntersecting && !passou) return;
+          en.target.style.animation = 'riseIn .85s cubic-bezier(.2,.85,.2,1) both';
+          en.target.style.opacity = '';
+          this.io.unobserve(en.target);
+        });
+      }, { threshold: 0 });
+      alvos.forEach((el, i) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.92) {
+          el.style.animation = 'riseIn .8s cubic-bezier(.2,.85,.2,1) ' + Math.min(i * 55, 300) + 'ms both';
+        } else {
+          el.style.opacity = '0';
+          this.io.observe(el);
+        }
+      });
+    }, 120);
+  }
+
+  rolarLinha(dir) {
+    const el = this.linha;
+    if (!el) return;
+    el.scrollLeft = el.scrollLeft + dir * Math.max(280, el.clientWidth * 0.7);
+  }
+
+  abaStyle(on) {
+    return {
+      padding: '12px 22px', borderRadius: '999px', cursor: 'pointer', fontSize: '15px', fontWeight: 700,
+      border: on ? '1px solid #241705' : '1px solid rgba(105,53,9,.22)',
+      background: on ? '#241705' : 'transparent',
+      color: on ? '#FFFDF2' : '#6B4A1E',
+      transition: 'background .3s ease, color .3s ease, border-color .3s ease'
+    };
+  }
+
+  tamanhos = [
+    { tipo: 'Tamanho', nome: 'Standard', medida: 'Tórax acima de 35 cm', texto: 'O tipo original de caça, com peso máximo em torno de 9 kg. Foi para esse porte que a raça foi desenhada: seguir o texugo dentro da toca.' },
+    { tipo: 'Tamanho', nome: 'Miniatura', medida: 'Tórax de 30 a 35 cm', texto: 'Selecionado para tocas mais estreitas. Mantém a mesma estrutura e temperamento do Standard, em escala reduzida.' },
+    { tipo: 'Tamanho', nome: 'Kaninchen (Coelho)', medida: 'Tórax até 30 cm', texto: 'O menor dos três, criado originalmente para a caça ao coelho. A medição oficial do tórax é feita a partir dos 15 meses de idade.' }
+  ];
+
+  pelagens = [
+    { tipo: 'Pelagem', nome: 'Pelo curto (Kurzhaar)', medida: 'Denso, curto e brilhante', texto: 'Pelagem justa ao corpo, sem falhas. Manutenção simples, mas menos proteção térmica em frio intenso.' },
+    { tipo: 'Pelagem', nome: 'Pelo longo (Langhaar)', medida: 'Liso, com franjas', texto: 'Pelo macio com franjas em orelhas, peito, ventre e cauda — a variedade do Peter. Exige escovação regular para evitar nós.' },
+    { tipo: 'Pelagem', nome: 'Pelo duro (Rauhaar)', medida: 'Áspero, com barba e sobrancelhas', texto: 'Pelagem dura e cerrada com subpelo, barba no focinho e sobrancelhas marcadas. É a variedade mais rústica das três.' }
+  ];
+
+  silenciarVideos() {
+    const aplicar = () => {
+      document.querySelectorAll('video').forEach((v) => {
+        v.defaultMuted = true;
+        v.muted = true;
+        v.volume = 0;
+        if (v.dataset.autoplay) {
+          v.loop = true;
+          if (!v.dataset.loopBound) {
+            v.dataset.loopBound = '1';
+            v.addEventListener('ended', () => {
+              v.currentTime = 0;
+              const r = v.play();
+              if (r && r.catch) r.catch(() => {});
+            });
+            v.addEventListener('pause', () => {
+              if (v.ended || v.seeking) return;
+              const r = v.play();
+              if (r && r.catch) r.catch(() => {});
+            });
+          }
+          const p = v.play();
+          if (p && p.catch) p.catch(() => {});
+        }
+      });
+    };
+    aplicar();
+    setTimeout(aplicar, 400);
+    setTimeout(aplicar, 1200);
+    setTimeout(aplicar, 2500);
+    setInterval(aplicar, 5000);
+  }
+
+  processarFeed() {
+    const tenta = (n) => {
+      if (window.instgrm && window.instgrm.Embeds) { window.instgrm.Embeds.process(); return; }
+      if (n < 20) setTimeout(() => tenta(n + 1), 400);
+    };
+    tenta(0);
+  }
+
+  feedEmbeds() {
+    const bruto = this.props.instagramPosts;
+    const lista = (typeof bruto === 'string' && bruto.trim())
+      ? bruto.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 3)
+      : ['https://www.instagram.com/canil_dkm/'];
+    return lista.map((url, i) => React.createElement('blockquote', {
+      key: url + i,
+      className: 'instagram-media',
+      'data-instgrm-permalink': url,
+      'data-instgrm-version': '14',
+      style: {
+        background: '#FFFDF2', border: '1px solid rgba(105,53,9,.14)', borderRadius: '20px',
+        margin: 0, padding: 0, minWidth: 0, width: '100%', overflow: 'hidden'
+      }
+    }, React.createElement('a', {
+      href: url, target: '_blank', rel: 'noopener',
+      style: { display: 'grid', gap: '10px', padding: '30px 26px', color: '#6B4A1E', fontSize: '15.5px', lineHeight: 1.65, textDecoration: 'none' }
+    }, React.createElement('strong', { style: { fontFamily: "'Volkhov', Georgia, serif", fontSize: '19px', color: '#3A2208' } }, '@canil_dkm'),
+       'Abrir publicação no Instagram')));
+  }
+
+  renderVals() {
+    const st = this.state;
+    const accent = this.props.accentColor || '#FAD91F';
+    const filhotesArq = [
+      { f: 'assets/filhote-5.jpeg', alt: 'Filhote de Dachshund do Canil DKM' },
+      { f: 'assets/filhote-6.jpeg', alt: 'Filhote de Dachshund do Canil DKM em ambiente domiciliar' },
+      { f: 'assets/filhote-7.jpeg', alt: 'Filhote de Dachshund do Canil DKM socializando' },
+      { f: 'assets/filhote-8.jpeg', alt: 'Filhote de Dachshund do Canil DKM no colo' }
+    ];
+
+    const abrir = (src, alt) => () => this.setState({ lightbox: src, lightboxAlt: alt });
+
+    const guiaItens = [
+      { titulo: 'Espaço e barreiras', texto: 'Antes da chegada, bloqueie escadas e sofás altos com portãozinho ou rampa. O filhote não deve subir e descer degraus livremente nos primeiros meses.' },
+      { titulo: 'Guia peitoral e identificação', texto: 'Prefira peitoral em vez de coleira de tração, que concentra força no pescoço. Plaquinha com telefone e microchip são o básico de segurança.' },
+      { titulo: 'Alimentação e peso', texto: 'Ração de qualidade na porção indicada pelo veterinário e petiscos contados. Sobrepeso é o fator de risco de coluna mais fácil de evitar.' },
+      { titulo: 'Rotina de socialização', texto: 'Nas primeiras semanas em casa, apresente sons, pisos, pessoas e outros cães em doses curtas e positivas. Socialização é janela, não pressa.' },
+      { titulo: 'Documentação e acompanhamento', texto: 'Você recebe pedigree, carteira de vacinação e histórico da ninhada. Depois da entrega seguimos disponíveis para dúvidas de manejo e adestramento.' }
+    ];
+
+    return {
+      progressStyle: { height: '100%', width: (st.progress * 100).toFixed(2) + '%', background: accent, transition: 'width .18s linear' },
+      espacoTopo: { height: st.headerH + 'px', background: '#180F04' },
+      linhaRef: (el) => { this.linha = el; },
+      voltarLinha: () => this.rolarLinha(-1),
+      avancarLinha: () => this.rolarLinha(1),
+      ficha: [
+        { rotulo: 'País de origem', valor: 'Alemanha', nota: 'Raça alemã de caça, desenvolvida para trabalho subterrâneo.' },
+        { rotulo: 'Classificação FCI', valor: 'Grupo 4 — padrão nº 148', nota: 'O Dachshund ocupa sozinho um grupo inteiro na FCI.' },
+        { rotulo: 'Nome alemão', valor: 'Dachshund / Teckel', nota: '"Dachs" (texugo) + "Hund" (cão). Teckel é o nome de uso comum na Alemanha.' },
+        { rotulo: 'Variedades', valor: '3 tamanhos × 3 pelagens', nota: 'Standard, Miniatura e Kaninchen; pelo curto, longo e duro.' },
+        { rotulo: 'Função original', valor: 'Caça em toca', nota: 'Farejar, perseguir e enfrentar presas dentro de galerias estreitas.' },
+        { rotulo: 'Temperamento', valor: 'Corajoso e independente', nota: 'Cão de trabalho: decidido, vocal, atento e muito ligado à família.' }
+      ],
+      marcos: [
+        { quando: 'Séc. XVI–XVIII', titulo: 'Os cães "que rastejam no texugo"', texto: 'Textos de caça alemães descrevem cães baixos e alongados usados contra texugos e raposas, chamados por variações de "Dachs Kriecher". É a raiz funcional do Teckel.' },
+        { quando: 'Séc. XIX', titulo: 'Do tipo ao padrão', texto: 'Criadores alemães começam a fixar características: linha de dorso longa, membros curtos, peito profundo, faro apurado e coragem para o confronto na toca.' },
+        { quando: '1879', titulo: 'Primeiro padrão escrito', texto: 'A raça ganha um padrão formal na Alemanha, marcando a passagem do cão de trabalho anônimo para raça com critérios de julgamento.' },
+        { quando: '1888', titulo: 'Deutscher Teckelklub', texto: 'A fundação do clube alemão da raça organiza registro, exposições e provas de trabalho — a estrutura que ainda hoje sustenta a criação séria do Teckel.' },
+        { quando: 'Séc. XX', titulo: 'Três pelagens, três tamanhos', texto: 'A seleção consolida pelo curto, longo e duro, e os tamanhos Standard, Miniatura e Kaninchen, este último medido pela circunferência do tórax.' },
+        { quando: 'FCI nº 148', titulo: 'Um grupo só para ele', texto: 'Na Federação Cinológica Internacional, o Dachshund é o único ocupante do Grupo 4 — reconhecimento da sua singularidade morfológica e funcional.' },
+        { quando: 'Brasil', titulo: 'CBKC e clubes filiados', texto: 'No Brasil, o registro genealógico é feito pela CBKC, com clubes filiados como o Kennel Club de São Paulo organizando exposições e emitindo documentação.' }
+      ],
+      abas: ['Tamanhos', 'Pelagens'].map((a) => ({
+        label: a, style: this.abaStyle(st.aba === a), onClick: () => this.setState({ aba: a })
+      })),
+      variedades: st.aba === 'Pelagens' ? this.pelagens : this.tamanhos,
+      pontosPadrao: [
+        { titulo: 'Estrutura', texto: 'Corpo longo e compacto, musculoso, com membros curtos — construído para força e mobilidade dentro da toca, nunca para fragilidade.' },
+        { titulo: 'Cabeça e expressão', texto: 'Cabeça alongada e afilada, olhos de expressão atenta e enérgica, orelhas de inserção alta e bem colocadas.' },
+        { titulo: 'Movimento', texto: 'Passada rasante e livre, com boa propulsão traseira. Dorso firme durante o movimento é sinal de estrutura correta.' },
+        { titulo: 'Temperamento no padrão', texto: 'O padrão descreve um cão equilibrado, nem agressivo nem medroso — caçador por vocação, companheiro por convivência.' }
+      ],
+      fichaPeter: [
+        { rotulo: 'Nome', valor: "Peter Schwartz'Hause" },
+        { rotulo: 'Sexo', valor: 'Macho' },
+        { rotulo: 'Pelagem', valor: 'Pelo longo, vermelho' },
+        { rotulo: 'Papel no canil', valor: 'Futuro reprodutor' },
+        { rotulo: 'Formação', valor: 'Adestrado pelo método DKM' }
+      ],
+      videosPeter: [
+        { src: 'assets/peter-10.mp4', legenda: 'Peter em rotina de treino: atenção ao condutor e resposta ao comando.' },
+        { src: 'assets/kaua-peter-14.mp4', legenda: 'Kauã brincando com o Peter — vínculo antes de exigência.' },
+        { src: 'assets/canil-13.mp4', legenda: 'Dia a dia do canil: manejo tranquilo e contato constante.' },
+        { src: 'assets/canil-15.mp4', legenda: 'Convivência entre os cães da casa, base da socialização dos filhotes.' }
+      ],
+      filhotes: filhotesArq.map((g) => ({ src: g.f, alt: g.alt, onClick: abrir(g.f, g.alt) })),
+      verPeter: abrir('assets/peter-9.jpeg', "Peter Schwartz'Hause, Dachshund de pelo longo vermelho"),
+      etapas: [
+        { passo: '01', titulo: 'Conversa inicial', texto: 'Entendemos sua rotina, espaço e expectativa antes de falar de filhote. Dachshund não combina com toda casa — e isso se diz na primeira conversa.' },
+        { passo: '02', titulo: 'Planejamento da ninhada', texto: 'Cruzamentos planejados com avaliação de estrutura, saúde e temperamento dos pais, respeitando intervalos entre ninhadas.' },
+        { passo: '03', titulo: 'Nascimento em casa', texto: 'Os filhotes nascem e crescem no ambiente doméstico, com acompanhamento diário de peso, mamadas e desenvolvimento.' },
+        { passo: '04', titulo: 'Socialização inicial', texto: 'Sons, pisos diferentes, manuseio, pessoas e outros cães desde as primeiras semanas — o alicerce do cão equilibrado.' },
+        { passo: '05', titulo: 'Escolha e reserva', texto: 'Apresentamos a ninhada com fotos e vídeos reais e ajudamos a casar perfil do filhote com o perfil da família.' },
+        { passo: '06', titulo: 'Entrega com documentação', texto: 'Pedigree, vacinação, vermifugação e orientação completa de manejo, alimentação e coluna. Suporte segue depois da entrega.' }
+      ],
+      cuidados: [
+        'Evitar saltos de sofá, cama e escadas: use rampas ou degraus baixos.',
+        'Erguer sempre apoiando peito e quadril ao mesmo tempo, nunca só pelas axilas.',
+        'Manter o peso ideal: cada quilo extra sobrecarrega a coluna longa.',
+        'Preferir peitoral a coleira de tração nos passeios.',
+        'Exercício regular e de baixo impacto, todos os dias, para musculatura de sustentação.',
+        'Procurar o veterinário imediatamente ao notar dor, relutância em se mover ou fraqueza nas patas.'
+      ],
+      termos: [
+        { termo: 'Afixo', texto: 'É o nome oficial do canil registrado na entidade cinófila. Todo cão nascido aqui carrega o afixo DKM no nome de registro. É a assinatura do criador, e ela responde pelo que produz.' },
+        { termo: 'Pedigree', texto: 'Certificado genealógico emitido pela CBKC com a ascendência do animal. Não é enfeite: é rastreabilidade de linhagem, base de qualquer trabalho de seleção honesto.' },
+        { termo: 'Exposições', texto: 'Nas exposições organizadas por clubes filiados, juízes avaliam os cães frente ao padrão da raça. É onde o criador submete seu trabalho a olhar externo.' },
+        { termo: 'Criação responsável', texto: 'Intervalo entre ninhadas, avaliação de saúde dos pais, socialização, entrega com documentação e suporte ao tutor depois da venda. Sem isso, é comércio, não criação.' }
+      ],
+      guia: guiaItens.map((g, i) => {
+        const open = st.guiaAbertos.indexOf(i) !== -1;
+        return {
+          titulo: g.titulo, texto: g.texto, expanded: open ? 'true' : 'false',
+          onClick: () => this.setState({ guiaAbertos: open ? st.guiaAbertos.filter((x) => x !== i) : st.guiaAbertos.concat([i]) }),
+          iconStyle: { fontSize: '25px', color: accent, transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .32s ease' },
+          acc: open ? '1' : '0'
+        };
+      }),
+      feedRef: (el) => { if (el) this.processarFeed(); },
+      feedEmbeds: this.feedEmbeds(),
+      lightbox: st.lightbox,
+      lightboxImg: st.lightbox ? React.createElement('img', { src: st.lightbox, alt: st.lightboxAlt, style: { maxWidth: '100%', maxHeight: '88vh', borderRadius: '20px', boxShadow: '0 60px 100px -50px rgba(0,0,0,.85)' } }) : null,
+      fechar: () => this.setState({ lightbox: null })
+    };
+  }
+}
+</script>
+</body>
+</html>
