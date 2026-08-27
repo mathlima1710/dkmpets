@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Coelhário DKM — Criação de coelhos Lion Head em Osasco, SP</title>
+<meta name="description" content="Coelhário DKM: criação especializada em coelhos Lion Head (juba de leão) com linhagem europeia e uruguaia. História da raça, plantel, ninhadas, manejo e guia do novo tutor em Osasco, SP.">
+<meta name="keywords" content="coelho Lion Head, juba de leão, coelhário Osasco, coelho anão, criação de coelhos, linhagem europeia, filhote de coelho">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dkmpets.com.br/coelhario-dkm">
+<meta property="og:title" content="Coelhário DKM — Coelhos Lion Head de linhagem">
+<meta property="og:description" content="Criação especializada em Lion Head com linhagem europeia e uruguaia. Osasco, SP.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<script async src="https://www.instagram.com/embed.js"></script>
+<link rel="stylesheet" href="mobile/mobile.css">
+<style>
+body { margin: 0; background: #FBF7EF; font-family: 'PT Serif', Georgia, serif; color: #3B3229; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+a { color: #A8532F; text-decoration: none; }
+a:hover { color: #7E3B1F; }
+[data-acc="0"] { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .4s cubic-bezier(.2,.8,.2,1), opacity .3s ease; }
+[data-acc="1"] { max-height: 700px; opacity: 1; overflow: hidden; transition: max-height .45s cubic-bezier(.2,.8,.2,1), opacity .35s ease .05s; }
+@keyframes riseIn { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+@keyframes driftSoft { 0%,100% { transform: translateY(0) rotate(0deg) } 50% { transform: translateY(-12px) rotate(-1.2deg) } }
+@keyframes hopHint { 0%,100% { transform: translateY(0) } 40% { transform: translateY(-7px) } 60% { transform: translateY(-2px) } }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Coelhário DKM","parentOrganization":{"@type":"LocalBusiness","name":"DKM Pets"},"url":"https://dkmpets.com.br/coelhario-dkm","description":"Criação especializada em coelhos Lion Head com linhagem europeia e uruguaia.","email":"contato@dkmpets.com.br","telephone":"+55 11 99271-5519","address":{"@type":"PostalAddress","addressLocality":"Osasco","addressRegion":"SP","addressCountry":"BR"}}
+</script>
+</helmet>
+
+<div style="position: fixed; top: 0; left: 0; right: 0; height: 3px; background: rgba(59, 50, 41, .08); z-index: 70">
+  <div style="{{ progressStyle }}"></div>
+</div>
+
+<header style="position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; padding: 12px clamp(20px, 5vw, 72px); background: rgba(251, 247, 239, .94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(59, 50, 41, .1)">
+  <a href="./DKM Pets.dc.html" aria-label="DKM Pets — página inicial" style="display: flex; align-items: center; gap: 14px">
+    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=160,fit=crop/YZ9VzLDaD2IxW987/img_9317-fotor-bg-remover-20241030213137-A85wLrzykqF4M895.png" alt="Logo da DKM Pets" width="50" height="50" style="width: 50px; height: 50px; object-fit: contain">
+    <span style="display: flex; align-items: center; gap: 11px; padding-left: 14px; border-left: 1px solid rgba(59, 50, 41, .2)">
+      <span style="font-family: 'Volkhov', Georgia, serif; font-weight: 700; font-size: 22px; line-height: 1; color: #3B3229">DKM</span>
+      <span style="font-family: 'Volkhov', Georgia, serif; font-size: 11.5px; line-height: 1; letter-spacing: .34em; text-transform: uppercase; color: #A8532F">Coelhário</span>
+    </span>
+  </a>
+  <nav aria-label="Seções do coelhário" style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px); flex-wrap: wrap; justify-content: flex-end">
+    <button type="button" data-menu-toggle="1" onClick="{{ alternarMenu }}" aria-label="Abrir menu de seções" aria-expanded="{{ navAberto }}" style="display: none; align-items: center; justify-content: center; width: 46px; height: 46px; border: 1px solid rgba(59, 50, 41, .2); border-radius: 14px; background: transparent; cursor: pointer">
+      <span style="{{ hambStyle }}"></span>
+    </button>
+    <span data-nav-links="{{ navAberto }}" style="display: flex; align-items: center; gap: clamp(10px, 1.5vw, 22px)">
+      <a href="#raca" style="font-size: 14.5px; font-weight: 700; color: #5A4E40" style-hover="color: #A8532F">A raça</a>
+      <a href="#historia" style="font-size: 14.5px; font-weight: 700; color: #5A4E40" style-hover="color: #A8532F">História</a>
+      <a href="#plantel" style="font-size: 14.5px; font-weight: 700; color: #5A4E40" style-hover="color: #A8532F">Plantel</a>
+      <a href="#filhotes" style="font-size: 14.5px; font-weight: 700; color: #5A4E40" style-hover="color: #A8532F">Filhotes</a>
+      <a href="#manejo" style="font-size: 14.5px; font-weight: 700; color: #5A4E40" style-hover="color: #A8532F">Manejo</a>
+      <a href="#instagram" style="font-size: 14.5px; font-weight: 700; color: #5A4E40" style-hover="color: #A8532F">Instagram</a>
+      <a href="./Canil DKM.dc.html" style="font-size: 14.5px; font-weight: 700; color: #8C8070" style-hover="color: #A8532F">Canil DKM ↗</a>
+    </span>
+    <a href="https://api.whatsapp.com/send?phone=5511992715519&amp;text=Oi,%20Kau%C3%A3!%20Quero%20saber%20sobre%20os%20coelhos%20do%20Coelh%C3%A1rio%20DKM." target="_blank" rel="noopener" style="padding: 12px 22px; border-radius: 999px; background: #7C8C6A; color: #FFFDF7; font-size: 15px; font-weight: 700" style-hover="background: #A8532F; color: #FFFDF7">Reservar coelho</a>
+  </nav>
+</header>
+
+<section data-screen-label="Abertura" style="position: relative; overflow: hidden; padding: clamp(46px, 6vw, 92px) clamp(20px, 5vw, 72px) clamp(52px, 6vw, 96px); background: linear-gradient(180deg, #FFFDF7 0%, #F4EEDF 100%)">
+  <span aria-hidden="true" style="position: absolute; top: -120px; right: -90px; width: 420px; height: 420px; border-radius: 50%; background: rgba(124, 140, 106, .14); animation: driftSoft 16s ease-in-out infinite"></span>
+  <span aria-hidden="true" style="position: absolute; bottom: -160px; left: -80px; width: 340px; height: 340px; border-radius: 50%; background: rgba(168, 83, 47, .1); animation: driftSoft 20s ease-in-out infinite reverse"></span>
+  <div style="position: relative; max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: center">
+    <div style="display: grid; gap: 24px">
+      <span data-reveal style="display: inline-flex; align-items: center; gap: 10px; width: fit-content; padding: 9px 18px; border-radius: 999px; background: rgba(124, 140, 106, .16); color: #55613F; font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase">Especialidade Lion Head • Osasco, SP</span>
+      <h1 data-reveal style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(38px, 6.2vw, 86px); line-height: 1.02; color: #3B3229; max-width: 18ch; text-wrap: pretty">O coelho que nasceu com <em style="font-style: italic; color: #A8532F">juba</em></h1>
+      <p data-reveal style="margin: 0; max-width: 56ch; font-size: clamp(17px, 1.4vw, 21px); line-height: 1.65; color: #5A4E40">O Coelhário DKM cria Lion Head de linhagem europeia e uruguaia com manejo silencioso, ninhadas acompanhadas e entrega orientada. Coelho não é bicho de gaiola pequena — é animal de rotina, espaço e paciência.</p>
+      <div data-reveal style="display: flex; flex-wrap: wrap; gap: 14px">
+        <a href="#filhotes" style="padding: 16px 30px; border-radius: 999px; background: #A8532F; color: #FFFDF7; font-weight: 700; font-size: 17px; box-shadow: 0 20px 40px -22px rgba(168, 83, 47, .8)" style-hover="background: #7E3B1F; color: #FFFDF7">Ver os filhotes</a>
+        <a href="#raca" style="padding: 16px 30px; border-radius: 999px; border: 1px solid rgba(59, 50, 41, .24); color: #3B3229; font-size: 17px" style-hover="border-color: #7C8C6A; color: #55613F">Conhecer a raça</a>
+      </div>
+      <div data-reveal style="display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 48px); padding-top: 20px; border-top: 1px solid rgba(59, 50, 41, .14)">
+        <div style="display: grid; gap: 4px"><strong style="font-family: 'Volkhov', Georgia, serif; font-size: 28px; color: #A8532F">Lion Head</strong><span style="font-size: 14px; color: #6B5F50">nossa especialidade</span></div>
+        <div style="display: grid; gap: 4px"><strong style="font-family: 'Volkhov', Georgia, serif; font-size: 28px; color: #A8532F">Europa + Uruguai</strong><span style="font-size: 14px; color: #6B5F50">origem do plantel</span></div>
+        <div style="display: grid; gap: 4px"><strong style="font-family: 'Volkhov', Georgia, serif; font-size: 28px; color: #A8532F">1,2 kg</strong><span style="font-size: 14px; color: #6B5F50">porte anão adulto</span></div>
+      </div>
+    </div>
+    <div data-reveal style="position: relative; display: grid; justify-items: center">
+      <img src="assets/coelho-35.jpeg" alt="Coelho Lion Head branco de juba longa no Coelhário DKM" loading="lazy" style="width: 100%; max-width: 460px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 260px 260px 32px 32px; box-shadow: 0 50px 90px -54px rgba(59, 50, 41, .8)">
+      <span style="position: absolute; bottom: 18px; left: 8px; padding: 14px 20px; background: #FFFDF7; border-radius: 18px; box-shadow: 0 26px 50px -32px rgba(59, 50, 41, .7)">
+        <strong style="display: block; font-family: 'Volkhov', Georgia, serif; font-size: 17px; color: #3B3229">Juba de leão</strong>
+        <span style="font-size: 13.5px; color: #6B5F50">a marca genética da raça</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section id="raca" data-screen-label="A raça" style="padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px); background: #FBF7EF">
+  <div style="max-width: 1320px; margin: 0 auto; display: grid; gap: 40px">
+    <div data-reveal style="display: grid; gap: 15px; max-width: 60ch">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #A8532F">Ficha da raça</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.1; color: #3B3229">Lion Head, em números e características</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px">
+      <sc-for list="{{ ficha }}" as="f" hint-placeholder-count="6">
+        <div data-reveal style="display: grid; gap: 8px; align-content: start; padding: 26px 22px; background: #FFFDF7; border: 1px solid rgba(59, 50, 41, .1); border-radius: 22px; box-shadow: 0 24px 44px -40px rgba(59, 50, 41, .6)">
+          <span style="font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #7C8C6A">{{ f.rotulo }}</span>
+          <strong style="font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: 21px; line-height: 1.25; color: #3B3229">{{ f.valor }}</strong>
+          <span style="font-size: 14.5px; line-height: 1.6; color: #6B5F50">{{ f.nota }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="historia" data-screen-label="História" style="padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px); background: #55613F; color: #FBF7EF">
+  <div style="max-width: 1320px; margin: 0 auto; display: grid; gap: 42px">
+    <div data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 60px); align-items: end">
+      <div style="display: grid; gap: 16px">
+        <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #E6C87A">História da raça</span>
+        <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.8vw, 50px); line-height: 1.08; color: #FBF7EF">Uma mutação belga que virou raça reconhecida</h2>
+      </div>
+      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: rgba(251, 247, 239, .84)">O Lion Head é jovem — surgiu no fim do século XX, quando criadores europeus notaram uma mutação espontânea de pelo ao redor da cabeça e decidiram fixá-la. Em três décadas, saiu do improviso para o padrão oficial.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(244px, 1fr)); gap: 20px">
+      <sc-for list="{{ marcos }}" as="m" hint-placeholder-count="6">
+        <div data-reveal style="display: grid; gap: 11px; align-content: start; padding: 28px 24px; border: 1px solid rgba(230, 200, 122, .3); border-radius: 22px; background: rgba(251, 247, 239, .06); transition: background .4s ease, transform .4s ease" style-hover="background: rgba(251, 247, 239, .11); transform: translateY(-6px)">
+          <strong style="font-family: 'Volkhov', Georgia, serif; font-size: 24px; color: #E6C87A">{{ m.quando }}</strong>
+          <h3 style="margin: 0; font-size: 17.5px; color: #FBF7EF">{{ m.titulo }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.72; color: rgba(251, 247, 239, .8)">{{ m.texto }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <div data-reveal style="display: grid; gap: 14px; padding-top: 12px; border-top: 1px solid rgba(230, 200, 122, .26)">
+      <h3 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(22px, 2.2vw, 30px); color: #FBF7EF">O gene da juba, em uma frase</h3>
+      <p style="margin: 0; max-width: 78ch; font-size: 16.5px; line-height: 1.75; color: rgba(251, 247, 239, .82)">A juba vem de um gene de efeito dominante incompleto: um animal com cópia dupla desenvolve juba dupla, mais volumosa e com saia lateral, enquanto a cópia simples produz a juba única, que costuma ralear na vida adulta. É por isso que a seleção de casais importa tanto — a juba não se garante por sorte, se planeja.</p>
+    </div>
+  </div>
+</section>
+
+<section id="plantel" data-screen-label="Plantel" style="padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px); background: #FBF7EF">
+  <div style="max-width: 1320px; margin: 0 auto; display: grid; gap: 44px">
+    <div data-reveal style="display: grid; gap: 15px; max-width: 56ch">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #A8532F">Nosso plantel</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.1; color: #3B3229">Três nomes, três linhagens</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #5A4E40">Cada matriz e cada padreador entra no plantel por estrutura, juba e temperamento — nessa ordem. Abaixo, quem sustenta as ninhadas do coelhário.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
+      <sc-for list="{{ plantel }}" as="p" hint-placeholder-count="3">
+        <article data-reveal style="display: grid; gap: 0; align-content: start; background: #FFFDF7; border: 1px solid rgba(59, 50, 41, .1); border-radius: 26px; overflow: hidden; box-shadow: 0 30px 56px -46px rgba(59, 50, 41, .7); transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease" style-hover="transform: translateY(-8px); box-shadow: 0 46px 76px -50px rgba(59, 50, 41, .85)">
+          <button type="button" onClick="{{ p.onClick }}" title="Ampliar foto" style="padding: 0; border: none; background: transparent; cursor: zoom-in; display: block">
+            <img src="{{ p.img }}" alt="{{ p.alt }}" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; transition: transform .7s cubic-bezier(.2,.8,.2,1)" style-hover="transform: scale(1.05)">
+          </button>
+          <div style="display: grid; gap: 12px; padding: 26px 24px 28px">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
+              <h3 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: 27px; color: #3B3229">{{ p.nome }}</h3>
+              <span style="padding: 5px 12px; border-radius: 999px; background: rgba(124, 140, 106, .16); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #55613F">{{ p.papel }}</span>
+            </div>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.72; color: #5A4E40">{{ p.texto }}</p>
+            <div style="display: grid; gap: 9px; padding-top: 6px; border-top: 1px solid rgba(59, 50, 41, .12)">
+              <sc-for list="{{ p.dados }}" as="d" hint-placeholder-count="3">
+                <div style="display: flex; justify-content: space-between; gap: 14px; font-size: 14.5px">
+                  <span style="color: #8C8070">{{ d.rotulo }}</span>
+                  <strong style="text-align: right; color: #3B3229">{{ d.valor }}</strong>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="filhotes" data-screen-label="Filhotes" style="padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px); background: linear-gradient(180deg, #F4EEDF 0%, #FFFDF7 100%)">
+  <div style="max-width: 1320px; margin: 0 auto; display: grid; gap: 40px">
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 22px; align-items: end; justify-content: space-between">
+      <div style="display: grid; gap: 15px; max-width: 54ch">
+        <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #A8532F">Filhotes</span>
+        <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.1; color: #3B3229">Ninhadas do coelhário</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.7; color: #5A4E40">Cores que saem das nossas linhagens: tricolor, chocolate, preto fumaça, fulvo, branco e arlequim. Toque na foto para ampliar.</p>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5511992715519&amp;text=Oi,%20Kau%C3%A3!%20Quero%20entrar%20na%20lista%20de%20espera%20de%20filhotes%20do%20Coelh%C3%A1rio%20DKM." target="_blank" rel="noopener" style="padding: 15px 28px; border-radius: 999px; background: #7C8C6A; color: #FFFDF7; font-weight: 700" style-hover="background: #A8532F; color: #FFFDF7">Lista de espera</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(212px, 1fr)); gap: 16px">
+      <sc-for list="{{ galeria }}" as="g" hint-placeholder-count="9">
+        <button type="button" onClick="{{ g.onClick }}" title="Ampliar imagem" data-reveal style="padding: 0; border: none; background: #F4EEDF; border-radius: 20px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 5">
+          <img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.8,.2,1)" style-hover="transform: scale(1.07)">
+        </button>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(248px, 1fr)); gap: 22px; padding-top: 14px; border-top: 1px solid rgba(59, 50, 41, .14)">
+      <sc-for list="{{ etapas }}" as="e" hint-placeholder-count="5">
+        <div data-reveal style="display: grid; gap: 10px; align-content: start">
+          <strong style="font-family: 'Volkhov', Georgia, serif; font-size: 20px; color: #A8532F">{{ e.passo }}</strong>
+          <h3 style="margin: 0; font-size: 17px; color: #3B3229">{{ e.titulo }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #5A4E40">{{ e.texto }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="manejo" data-screen-label="Manejo" style="padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px); background: #FBF7EF">
+  <div style="max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 60px); align-items: start">
+    <div data-reveal style="display: grid; gap: 20px">
+      <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #A8532F">Manejo responsável</span>
+      <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(29px, 3.4vw, 44px); line-height: 1.1; color: #3B3229">O que ninguém conta antes de levar um coelho</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #5A4E40">Coelho é presa: sente o mundo pelo ouvido e pelo cheiro, e assusta com o que para nós é banal. Boa criação é metade genética, metade rotina — e o tutor herda essa segunda metade.</p>
+      <div style="display: grid; gap: 13px">
+        <sc-for list="{{ cuidados }}" as="c" hint-placeholder-count="6">
+          <div style="display: flex; gap: 13px; align-items: flex-start; font-size: 16px; line-height: 1.68; color: #3B3229">
+            <span style="flex: 0 0 auto; margin-top: 7px; width: 9px; height: 9px; border-radius: 50%; background: #7C8C6A"></span>
+            <span>{{ c }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <p style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #8C8070">Orientação de manejo — não substitui avaliação de médico veterinário especializado em silvestres e exóticos.</p>
+    </div>
+    <div style="display: grid; gap: 14px">
+      <sc-for list="{{ guia }}" as="g" hint-placeholder-count="5">
+        <div data-reveal style="padding: 4px 26px; background: #FFFDF7; border: 1px solid rgba(59, 50, 41, .1); border-radius: 20px">
+          <button type="button" onClick="{{ g.onClick }}" aria-expanded="{{ g.expanded }}" style="display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; padding: 22px 0; border: none; background: transparent; text-align: left; cursor: pointer; font-size: 17.5px; font-weight: 700; color: #3B3229">
+            {{ g.titulo }}
+            <span style="{{ g.iconStyle }}">+</span>
+          </button>
+          <div data-acc="{{ g.acc }}">
+            <p style="margin: 0; padding-bottom: 22px; font-size: 16px; line-height: 1.75; color: #5A4E40">{{ g.texto }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="instagram" data-screen-label="Instagram" style="padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px); background: #F4EEDF">
+  <div style="max-width: 1320px; margin: 0 auto; display: grid; gap: 36px">
+    <div data-reveal style="display: flex; flex-wrap: wrap; gap: 22px; align-items: end; justify-content: space-between">
+      <div style="display: grid; gap: 14px; max-width: 54ch">
+        <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #A8532F">No Instagram</span>
+        <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 48px); line-height: 1.1; color: #3B3229">Ninhadas e novidades em @coelhario_dkm</h2>
+        <p style="margin: 0; font-size: 16.5px; line-height: 1.7; color: #5A4E40">Filhotes disponíveis, crescimento da juba e o dia a dia do coelhário.</p>
+      </div>
+      <a href="https://www.instagram.com/coelhario_dkm" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 11px; padding: 15px 28px; border-radius: 999px; background: #3B3229; color: #FFFDF7; font-weight: 700; font-size: 16px" style-hover="background: #A8532F; color: #FFFDF7"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.0027 5.84808C8.59743 5.84808 5.85075 8.59477 5.85075 12C5.85075 15.4053 8.59743 18.1519 12.0027 18.1519C15.4079 18.1519 18.1546 15.4053 18.1546 12C18.1546 8.59477 15.4079 5.84808 12.0027 5.84808ZM12.0027 15.9996C9.80212 15.9996 8.00312 14.2059 8.00312 12C8.00312 9.7941 9.79677 8.00046 12.0027 8.00046C14.2086 8.00046 16.0022 9.7941 16.0022 12C16.0022 14.2059 14.2032 15.9996 12.0027 15.9996ZM19.8412 5.59644C19.8412 6.39421 19.1987 7.03135 18.4062 7.03135C17.6085 7.03135 16.9713 6.38885 16.9713 5.59644C16.9713 4.80402 17.6138 4.16153 18.4062 4.16153C19.1987 4.16153 19.8412 4.80402 19.8412 5.59644ZM23.9157 7.05277C23.8247 5.13063 23.3856 3.42801 21.9775 2.02522C20.5747 0.622429 18.8721 0.183388 16.9499 0.0870135C14.9689 -0.0254238 9.03112 -0.0254238 7.05008 0.0870135C5.1333 0.178034 3.43068 0.617075 2.02253 2.01986C0.614389 3.42265 0.180703 5.12527 0.0843279 7.04742C-0.0281093 9.02845 -0.0281093 14.9662 0.0843279 16.9472C0.175349 18.8694 0.614389 20.572 2.02253 21.9748C3.43068 23.3776 5.12794 23.8166 7.05008 23.913C9.03112 24.0254 14.9689 24.0254 16.9499 23.913C18.8721 23.822 20.5747 23.3829 21.9775 21.9748C23.3803 20.572 23.8193 18.8694 23.9157 16.9472C24.0281 14.9662 24.0281 9.03381 23.9157 7.05277ZM21.3564 19.0728C20.9388 20.1223 20.1303 20.9307 19.0755 21.3537C17.496 21.9802 13.7481 21.8356 12.0027 21.8356C10.2572 21.8356 6.50396 21.9748 4.92984 21.3537C3.88042 20.9361 3.07195 20.1276 2.64897 19.0728C2.02253 17.4934 2.16709 13.7455 2.16709 12C2.16709 10.2546 2.02789 6.50129 2.64897 4.92717C3.06659 3.87776 3.87507 3.06928 4.92984 2.6463C6.50931 2.01986 10.2572 2.16443 12.0027 2.16443C13.7481 2.16443 17.5014 2.02522 19.0755 2.6463C20.1249 3.06392 20.9334 3.8724 21.3564 4.92717C21.9828 6.50665 21.8383 10.2546 21.8383 12C21.8383 13.7455 21.9828 17.4987 21.3564 19.0728Z"></path></svg>Seguir o coelhário</a>
+    </div>
+    <div ref="{{ feedRef }}" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start">
+      {{ feedEmbeds }}
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Convite" style="position: relative; overflow: hidden; padding: clamp(64px, 8vw, 120px) clamp(20px, 5vw, 72px); background: #3B3229; color: #FBF7EF">
+  <div style="max-width: 1000px; margin: 0 auto; display: grid; gap: 24px; justify-items: center; text-align: center">
+    <span aria-hidden="true" style="display: block; width: 12px; height: 12px; border-radius: 50%; background: #E6C87A; animation: hopHint 2.6s ease-in-out infinite"></span>
+    <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4vw, 54px); line-height: 1.08; color: #FBF7EF; max-width: 24ch">Venha conhecer antes de escolher</h2>
+    <p style="margin: 0; max-width: 56ch; font-size: 17.5px; line-height: 1.7; color: rgba(251, 247, 239, .82)">Chamada de vídeo, visita agendada, histórico dos pais e todas as perguntas que você quiser fazer. Criação boa se mostra de perto.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center">
+      <a href="https://api.whatsapp.com/send?phone=5511992715519&amp;text=Oi,%20Kau%C3%A3!%20Quero%20conhecer%20o%20Coelh%C3%A1rio%20DKM%20e%20saber%20das%20pr%C3%B3ximas%20ninhadas." target="_blank" rel="noopener" style="padding: 17px 32px; border-radius: 999px; background: #E6C87A; color: #3B3229; font-weight: 700; font-size: 17px" style-hover="background: #FFFDF7; color: #3B3229">Falar com o Kauã</a>
+      <a href="./DKM Pets.dc.html" style="padding: 17px 32px; border-radius: 999px; border: 1px solid rgba(251, 247, 239, .4); color: #FBF7EF; font-size: 17px" style-hover="border-color: #E6C87A; color: #E6C87A">Voltar para DKM Pets</a>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ lightbox }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Imagem ampliada" onClick="{{ fechar }}" style="position: fixed; inset: 0; z-index: 95; display: flex; align-items: center; justify-content: center; padding: 4vw; background: rgba(35, 29, 22, .92); backdrop-filter: blur(8px); cursor: zoom-out">
+    {{ lightboxImg }}
+    <button type="button" onClick="{{ fechar }}" aria-label="Fechar" style="position: absolute; top: 26px; right: 30px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(251, 247, 239, .38); background: transparent; color: #FBF7EF; font-size: 20px; cursor: pointer">✕</button>
+  </div>
+</sc-if>
+
+<footer style="padding: clamp(44px, 5vw, 68px) clamp(20px, 5vw, 72px) 34px; background: #2C251D; color: rgba(251, 247, 239, .72)">
+  <div style="max-width: 1320px; margin: 0 auto; display: grid; gap: 30px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px">
+      <div style="display: grid; gap: 12px; align-content: start">
+        <span style="display: flex; align-items: center; gap: 11px">
+          <span style="font-family: 'Volkhov', Georgia, serif; font-weight: 700; font-size: 21px; color: #FBF7EF">DKM</span>
+          <span style="font-family: 'Volkhov', Georgia, serif; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #E6C87A">Coelhário</span>
+        </span>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7">Criação especializada em coelhos Lion Head com linhagem europeia e uruguaia, em Osasco — SP.</p>
+      </div>
+      <div style="display: grid; gap: 9px; align-content: start; font-size: 14.5px">
+        <strong style="color: #FBF7EF; font-family: 'Volkhov', Georgia, serif; font-weight: 400">Nesta página</strong>
+        <a href="#raca" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">A raça</a>
+        <a href="#historia" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">História</a>
+        <a href="#plantel" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">Plantel</a>
+        <a href="#manejo" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">Manejo</a>
+      </div>
+      <div style="display: grid; gap: 9px; align-content: start; font-size: 14.5px">
+        <strong style="color: #FBF7EF; font-family: 'Volkhov', Georgia, serif; font-weight: 400">Outras frentes</strong>
+        <a href="./DKM Pets.dc.html" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">DKM Pets</a>
+        <a href="./Canil DKM.dc.html" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">Canil DKM — Dachshund</a>
+      </div>
+      <div style="display: grid; gap: 9px; align-content: start; font-size: 14.5px">
+        <strong style="color: #FBF7EF; font-family: 'Volkhov', Georgia, serif; font-weight: 400">Contato</strong>
+        <a href="mailto:contato@dkmpets.com.br" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">contato@dkmpets.com.br</a>
+        <a href="tel:+5511992715519" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">+55 11 99271-5519</a>
+        <a href="https://www.instagram.com/coelhario_dkm" target="_blank" rel="noopener" style="color: rgba(251, 247, 239, .72)" style-hover="color: #E6C87A">@coelhario_dkm</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; padding-top: 20px; border-top: 1px solid rgba(251, 247, 239, .14); font-size: 13px">
+      <span>© 2026 DKM Pets — Coelhário DKM. Todos os direitos reservados.</span>
+      <span>Criar bem é criar com paciência.</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#A8532F&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#A8532F&quot;,&quot;#7C8C6A&quot;,&quot;#C08A18&quot;,&quot;#8A6634&quot;],&quot;section&quot;:&quot;Marca&quot;},&quot;instagramPosts&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Instagram&quot;}}">
+class Component extends DCLogic {
+  state = { progress: 0, guiaAbertos: [], lightbox: null, lightboxAlt: '', navAberto: false };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+      if (Math.abs(progress - this.state.progress) > 0.004) this.setState({ progress });
+    };
+    this.onScrollSafety = () => {
+      const nodes = document.querySelectorAll('[data-reveal]');
+      for (let i = 0; i < nodes.length; i++) {
+        const el = nodes[i];
+        if (el.style.opacity !== '0') continue;
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.style.animation = 'riseIn .85s cubic-bezier(.2,.85,.2,1) both';
+          el.style.opacity = '';
+        }
+      }
+    };
+    this.onKey = (e) => { if (e.key === 'Escape') this.setState({ lightbox: null, navAberto: false }); };
+    this.onHash = () => this.setState({ navAberto: false });
+    window.addEventListener('scroll', this.onScrollSafety, { passive: true });
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('keydown', this.onKey);
+    window.addEventListener('hashchange', this.onHash);
+    this.setupReveal();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.onScrollSafety);
+    window.removeEventListener('keydown', this.onKey);
+    window.removeEventListener('hashchange', this.onHash);
+    if (this.io) this.io.disconnect();
+  }
+
+  setupReveal() {
+    if (typeof IntersectionObserver !== 'function') return;
+    if (this.io) this.io.disconnect();
+    setTimeout(() => {
+      const alvos = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+      this.io = new IntersectionObserver((entradas) => {
+        entradas.forEach((en) => {
+          const passou = en.boundingClientRect.top < window.innerHeight;
+          if (!en.isIntersecting && !passou) return;
+          en.target.style.animation = 'riseIn .85s cubic-bezier(.2,.85,.2,1) both';
+          en.target.style.opacity = '';
+          this.io.unobserve(en.target);
+        });
+      }, { threshold: 0 });
+      alvos.forEach((el, i) => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+          el.style.animation = 'riseIn .8s cubic-bezier(.2,.85,.2,1) ' + Math.min(i * 55, 300) + 'ms both';
+        } else {
+          el.style.opacity = '0';
+          this.io.observe(el);
+        }
+      });
+    }, 120);
+  }
+
+  processarFeed() {
+    const tenta = (n) => {
+      if (window.instgrm && window.instgrm.Embeds) { window.instgrm.Embeds.process(); return; }
+      if (n < 20) setTimeout(() => tenta(n + 1), 400);
+    };
+    tenta(0);
+  }
+
+  feedEmbeds() {
+    const bruto = this.props.instagramPosts;
+    const lista = (typeof bruto === 'string' && bruto.trim())
+      ? bruto.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 3)
+      : ['https://www.instagram.com/coelhario_dkm/'];
+    return lista.map((url, i) => React.createElement('blockquote', {
+      key: url + i,
+      className: 'instagram-media',
+      'data-instgrm-permalink': url,
+      'data-instgrm-version': '14',
+      style: {
+        background: '#FFFDF7', border: '1px solid rgba(59,50,41,.12)', borderRadius: '20px',
+        margin: 0, padding: 0, minWidth: 0, width: '100%', overflow: 'hidden'
+      }
+    }, React.createElement('a', {
+      href: url, target: '_blank', rel: 'noopener',
+      style: { display: 'grid', gap: '10px', padding: '30px 26px', color: '#5A4E40', fontSize: '15.5px', lineHeight: 1.65, textDecoration: 'none' }
+    }, React.createElement('strong', { style: { fontFamily: "'Volkhov', Georgia, serif", fontSize: '19px', color: '#3B3229' } }, '@coelhario_dkm'),
+       'Abrir publicação no Instagram')));
+  }
+
+  guiaItens = [
+    { titulo: 'Espaço: muito maior do que parece', texto: 'Gaiola é dormitório, não moradia. O coelho precisa de área de solta diária, piso não escorregadio e cantos onde possa se esconder. Cercadinho amplo ou quarto à prova de fios funciona melhor que qualquer viveiro pequeno.' },
+    { titulo: 'Alimentação: feno em primeiro lugar', texto: 'Feno de gramínea à vontade, o dia inteiro — é ele que desgasta os dentes que crescem a vida toda e mantém o intestino funcionando. Ração específica em porção medida e folhosas seguras completam. Nada de pão, biscoito, sementes ou mistura colorida.' },
+    { titulo: 'Manuseio: nunca pelas orelhas', texto: 'Erguer sempre apoiando o peito e o traseiro ao mesmo tempo, junto ao corpo. Coelho que se sente sem apoio dá coice para trás e pode lesionar a própria coluna. Criança segura sentada no chão, nunca em pé.' },
+    { titulo: 'Juba: escovação é rotina, não luxo', texto: 'O Lion Head tem juba que embola. Escovação suave semanal — mais frequente na troca de pelo — evita nós e reduz a ingestão de pelo durante a higiene do próprio animal.' },
+    { titulo: 'Sinais de alerta', texto: 'Parar de comer, não produzir fezes por algumas horas, ficar prostrado ou de barriga colada no chão é urgência, não observação. Tenha o contato de um veterinário de exóticos antes de precisar dele.' },
+    { titulo: 'Castração e convivência', texto: 'A castração reduz marcação de território, comportamento agressivo e riscos de saúde nas fêmeas, além de viabilizar casais convivendo em paz. Converse sobre a idade adequada na entrega do filhote.' }
+  ];
+
+  renderVals() {
+    const st = this.state;
+    const accent = this.props.accentColor || '#A8532F';
+
+    const abrir = (src, alt) => () => this.setState({ lightbox: src, lightboxAlt: alt });
+
+    const fotos = [
+      { f: 'assets/coelho-26.jpeg', alt: 'Filhote de coelho Lion Head preto de juba densa' },
+      { f: 'assets/coelho-27.jpeg', alt: 'Filhote de coelho Lion Head chocolate' },
+      { f: 'assets/coelho-28.jpeg', alt: 'Coelha Lion Head adulta de pelagem preta e branca em cesto' },
+      { f: 'assets/coelho-29.jpeg', alt: 'Filhote de coelho Lion Head fulvo' },
+      { f: 'assets/coelho-30.jpeg', alt: 'Filhote de coelho Lion Head arlequim preto e branco' },
+      { f: 'assets/coelho-31.jpeg', alt: 'Filhote de coelho Lion Head preto fumaça com patas brancas' },
+      { f: 'assets/coelho-33.jpeg', alt: 'Filhote de coelho Lion Head branco de olhos escuros' },
+      { f: 'assets/coelho-34.jpeg', alt: 'Coelho Lion Head branco em nicho de madeira do coelhário' },
+      { f: 'assets/coelho-35.jpeg', alt: 'Coelho Lion Head branco de juba longa no nicho do coelhário' }
+    ];
+
+    return {
+      progressStyle: { height: '100%', width: (st.progress * 100).toFixed(2) + '%', background: accent, transition: 'width .18s linear' },
+      navAberto: st.navAberto ? '1' : '0',
+      alternarMenu: () => this.setState({ navAberto: !st.navAberto }),
+      hambStyle: {
+        display: 'block', width: '20px', height: '2px', borderRadius: '2px',
+        background: '#3B3229', position: 'relative',
+        boxShadow: st.navAberto ? 'none' : '0 -6px 0 #3B3229, 0 6px 0 #3B3229',
+        transform: st.navAberto ? 'rotate(45deg)' : 'none',
+        transition: 'transform .3s ease, box-shadow .2s ease'
+      },
+      ficha: [
+        { rotulo: 'Nome da raça', valor: 'Lion Head', nota: 'Também chamado de cabeça de leão ou juba de leão.' },
+        { rotulo: 'Origem', valor: 'Bélgica', nota: 'Mutação espontânea fixada por criadores europeus nos anos 1990.' },
+        { rotulo: 'Peso adulto', valor: 'Cerca de 1,2 a 1,7 kg', nota: 'Porte anão: cabe no colo a vida inteira, mas precisa de espaço para se movimentar.' },
+        { rotulo: 'Marca registrada', valor: 'Juba ao redor da cabeça', nota: 'Pelo longo em coroa; a juba dupla é mais volumosa que a simples.' },
+        { rotulo: 'Expectativa de vida', valor: '8 a 12 anos', nota: 'Com manejo correto, alimentação adequada e acompanhamento veterinário.' },
+        { rotulo: 'Temperamento', valor: 'Dócil e curioso', nota: 'Animal de presa: responde a rotina previsível, ambiente calmo e manuseio respeitoso.' }
+      ],
+      marcos: [
+        { quando: 'Anos 1990', titulo: 'A mutação aparece', texto: 'Na Bélgica, criadores observam coelhos anões nascidos com um anel de pelo longo em volta da cabeça — uma mutação espontânea, não planejada.' },
+        { quando: 'Seleção inicial', titulo: 'Fixando a juba', texto: 'Os primeiros criadores selecionam animais com a característica para torná-la constante, cruzando com anões de porte pequeno e boa estrutura.' },
+        { quando: 'Fim dos anos 1990', titulo: 'Chegada ao Reino Unido', texto: 'O tipo se espalha pela Europa e ganha adeptos no Reino Unido, onde a criação organizada acelera a padronização da raça.' },
+        { quando: 'Anos 2000', titulo: 'Reconhecimento britânico', texto: 'Clubes britânicos reconhecem oficialmente o Lion Head, com padrão descrevendo porte, cabeça, orelhas curtas e a coroa de pelo.' },
+        { quando: '2014', titulo: 'Reconhecimento nos EUA', texto: 'A raça é aceita oficialmente pela associação norte-americana de criadores, consolidando o Lion Head no circuito internacional de exposições.' },
+        { quando: 'Brasil', titulo: 'Popularização recente', texto: 'No Brasil o Lion Head chegou por importações de plantel europeu e sul-americano — daí a importância de conhecer a linhagem de quem cria.' }
+      ],
+      plantel: [
+        {
+          nome: 'Aurora', papel: 'Matriz', img: 'assets/coelho-32-aurora.jpeg',
+          alt: 'Aurora, coelha Lion Head padreadora de linhagem uruguaia',
+          texto: 'Nossa mãe mais antiga e a base do coelhário: linhagem uruguaia, porte pequeno bem marcado e temperamento sereno que ela passa às ninhadas. Mãe da Margô.',
+          dados: [{ rotulo: 'Linhagem', valor: 'Uruguai' }, { rotulo: 'Peso', valor: '1,2 kg' }, { rotulo: 'Papel', valor: 'Matriz fundadora' }],
+          onClick: abrir('assets/coelho-32-aurora.jpeg', 'Aurora, matriz de linhagem uruguaia')
+        },
+        {
+          nome: 'Margô', papel: 'Futura matriz', img: 'assets/coelho-25-margo.jpeg',
+          alt: 'Margô, coelha Lion Head preta nascida no Coelhário DKM',
+          texto: 'Nascida aqui, filha da Aurora. Juba densa desde filhote e a mesma docilidade da mãe — será uma das próximas mamães do coelhário, já acompanhada desde o primeiro dia.',
+          dados: [{ rotulo: 'Linhagem', valor: 'Nascida no plantel' }, { rotulo: 'Mãe', valor: 'Aurora' }, { rotulo: 'Papel', valor: 'Futura matriz' }],
+          onClick: abrir('assets/coelho-25-margo.jpeg', 'Margô, futura matriz nascida no coelhário')
+        },
+        {
+          nome: 'Tricolor', papel: 'Padreador', img: 'assets/coelho-24-tricolor.jpeg',
+          alt: 'Coelho Lion Head tricolor de linhagem europeia, futuro padreador',
+          texto: 'Macho tricolor de linhagem europeia, um dos futuros papais do coelhário. Entra no plantel para ampliar a variedade de pelagens sem abrir mão do porte anão e da juba.',
+          dados: [{ rotulo: 'Linhagem', valor: 'Europeia' }, { rotulo: 'Pelagem', valor: 'Tricolor' }, { rotulo: 'Papel', valor: 'Futuro padreador' }],
+          onClick: abrir('assets/coelho-24-tricolor.jpeg', 'Macho tricolor de linhagem europeia')
+        }
+      ],
+      galeria: fotos.map((g) => ({ src: g.f, alt: g.alt, onClick: abrir(g.f, g.alt) })),
+      etapas: [
+        { passo: '01', titulo: 'Conversa antes de tudo', texto: 'Entendemos sua casa, sua rotina e quem vai cuidar. Coelho é animal delicado: se o encaixe não existe, dizemos isso na primeira conversa.' },
+        { passo: '02', titulo: 'Casais planejados', texto: 'Cruzamentos definidos por porte, juba e temperamento, com intervalo de descanso entre as ninhadas de cada matriz.' },
+        { passo: '03', titulo: 'Ninhada em ambiente calmo', texto: 'Os filhotes nascem em local silencioso e protegido, com acompanhamento diário de peso e desenvolvimento — sem manuseio excessivo nos primeiros dias.' },
+        { passo: '04', titulo: 'Desmame na hora certa', texto: 'Nenhum filhote sai antes do desmame completo e de estar comendo feno e ração com segurança. Pressa aqui custa a vida do animal.' },
+        { passo: '05', titulo: 'Entrega orientada', texto: 'Você recebe o filhote com orientação de alimentação, espaço, manuseio e escovação da juba — e o nosso contato aberto para dúvidas depois.' }
+      ],
+      cuidados: [
+        'Feno de gramínea disponível o tempo todo — é a base da dieta, não um complemento.',
+        'Nunca erguer pelas orelhas ou pela nuca: apoie peito e traseiro juntos.',
+        'Ambiente arejado e sombreado; calor acima de 28 °C é risco real para coelhos.',
+        'Escovação suave da juba toda semana, mais frequente na troca de pelo.',
+        'Área de solta diária com piso firme — gaiola pequena adoece o animal.',
+        'Veterinário de animais silvestres e exóticos escolhido antes da primeira urgência.'
+      ],
+      guia: this.guiaItens.map((g, i) => {
+        const open = st.guiaAbertos.indexOf(i) !== -1;
+        return {
+          titulo: g.titulo, texto: g.texto, expanded: open ? 'true' : 'false',
+          acc: open ? '1' : '0',
+          onClick: () => this.setState({ guiaAbertos: open ? st.guiaAbertos.filter((x) => x !== i) : st.guiaAbertos.concat([i]) }),
+          iconStyle: { fontSize: '25px', color: accent, transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .32s ease' }
+        };
+      }),
+      feedRef: (el) => { if (el) this.processarFeed(); },
+      feedEmbeds: this.feedEmbeds(),
+      lightbox: st.lightbox,
+      lightboxImg: st.lightbox ? React.createElement('img', { src: st.lightbox, alt: st.lightboxAlt, style: { maxWidth: '100%', maxHeight: '88vh', borderRadius: '20px', boxShadow: '0 60px 100px -50px rgba(0,0,0,.8)' } }) : null,
+      fechar: () => this.setState({ lightbox: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

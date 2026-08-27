@@ -1,0 +1,189 @@
+/* DKM Pets — ajustes de mobile e tablet.
+   Carregado no <helmet> de "DKM Pets.dc.html" e "Canil DKM.dc.html".
+   Só entra em vigor abaixo de 1024px: o desktop segue intocado. */
+
+/* ---------- Base: nada estoura a largura da tela ---------- */
+@media (max-width: 1023px) {
+  /* Nunca usar overflow-x: hidden no html/body: isso torna o body o container
+     de rolagem e mata window.scrollY, a barra de progresso e as âncoras.
+     `clip` contém estouro lateral sem criar container de rolagem. */
+  body { max-width: 100%; overflow-x: clip; }
+  img, video, iframe, blockquote { max-width: 100%; }
+  h1, h2, h3, p, blockquote, span, strong, li { overflow-wrap: break-word; }
+}
+
+/* ---------- Tablet e celular ---------- */
+@media (max-width: 900px) {
+  /* Cabeçalho compacto: logo + menu sanduíche + CTA sempre visíveis numa linha */
+  body header {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    gap: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+  header > nav {
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    justify-content: flex-end !important;
+    overflow: visible !important;
+  }
+  header img { width: 42px !important; height: 42px !important; }
+  header a[aria-label] > span:last-child { padding-left: 10px !important; gap: 8px !important; }
+
+  /* Botão sanduíche aparece só aqui */
+  [data-menu-toggle] { display: flex !important; flex: 0 0 auto; }
+
+  /* Links de página viram painel suspenso sob o cabeçalho */
+  [data-nav-links] {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2px !important;
+    padding: 8px 16px 16px !important;
+    background: rgba(253, 252, 222, .98);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(105, 53, 9, .14);
+    box-shadow: 0 24px 40px -28px rgba(58, 34, 8, .7);
+  }
+  [data-nav-links][data-nav-dark] {
+    background: rgba(24, 15, 4, .98);
+    border-bottom-color: rgba(250, 217, 31, .2);
+  }
+  [data-nav-links] > * {
+    width: 100%;
+    min-height: 46px;
+    display: flex !important;
+    align-items: center;
+    text-align: left;
+    justify-content: flex-start;
+    border-bottom: none !important;
+    font-size: 16px !important;
+  }
+  [data-nav-links="0"] { display: none !important; }
+  [data-nav-links="1"] { display: flex !important; }
+
+  /* Ícones sociais saem do cabeçalho no mobile (seguem no rodapé) */
+  [data-nav-social] { display: none !important; }
+
+  /* CTA do cabeçalho: alvo confortável e nunca cortado */
+  header > nav > a[href*="whatsapp"] {
+    flex: 0 0 auto;
+    min-height: 44px;
+    display: inline-flex !important;
+    align-items: center;
+    padding: 11px 16px !important;
+    font-size: 14.5px !important;
+    white-space: nowrap;
+  }
+
+  /* Seções: respiro lateral menor, altura de hero controlada */
+  section { padding-left: 18px !important; padding-right: 18px !important; }
+  section:first-of-type,
+  main > section:first-child { min-height: 76vh !important; }
+
+  /* Vídeos: largura e altura em auto, apenas os máximos limitados. Assim o
+     algoritmo de elemento substituído preserva a proporção NATIVA de cada
+     clipe (há verticais 9:16 e um 4:5), sem recorte e sem tarja. */
+  video {
+    width: auto !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    max-width: min(100%, 400px) !important;
+    max-height: min(70vh, 700px) !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background: #1B1104;
+  }
+  /* Exceção: vídeo de fundo do hero precisa cobrir a seção inteira */
+  section video[data-autoplay] {
+    position: absolute !important;
+    inset: 0 !important;
+    aspect-ratio: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    max-height: none !important;
+    margin: 0 !important;
+    object-fit: cover !important;
+  }
+
+  /* Grades de 2+ colunas viram coluna única */
+  section [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  /* Blocos alternados de Serviços: texto sempre antes da imagem */
+  section article > div:first-child { order: 2 !important; }
+  section article > div:last-child { order: 1 !important; }
+
+  /* Linha do tempo horizontal: cartões quase de tela cheia */
+  [style*="overflow-x: auto"] > article { flex-basis: 84vw !important; }
+
+  /* Alvos de toque */
+  button { min-height: 44px; }
+
+  /* Menos ar morto: alturas de seção e respiros internos mais justos */
+  section { padding-top: clamp(44px, 9vw, 72px) !important; padding-bottom: clamp(44px, 9vw, 72px) !important; }
+  section > div { gap: clamp(22px, 5vw, 34px) !important; }
+  section [style*="gap: clamp(32px, 5vw, 72px)"],
+  section [style*="gap: clamp(34px, 5vw, 80px)"],
+  section [style*="gap: clamp(28px, 4vw, 60px)"] { gap: 26px !important; }
+
+  /* Tipografia */
+  h1 { font-size: clamp(30px, 8.4vw, 44px) !important; line-height: 1.08 !important; max-width: none !important; }
+  h2 { font-size: clamp(25px, 6.6vw, 34px) !important; line-height: 1.14 !important; }
+  h3 { font-size: clamp(19px, 5vw, 23px) !important; }
+  p, blockquote, li { font-size: 16px !important; line-height: 1.7 !important; }
+
+  /* Selos CBKC / Kennel Club SP */
+  section img[style*="object-fit: contain"] { height: 50px !important; }
+
+  /* Cartão flutuante do Kauã não sai da moldura */
+  div[style*="position: absolute"][style*="bottom: -24px"],
+  div[style*="position: absolute"][style*="bottom: -22px"] {
+    position: static !important;
+    margin-top: 14px;
+    max-width: none !important;
+  }
+
+  /* Imagem com canto de gota: raio mais discreto no mobile */
+  img[style*="150px"] { border-radius: 20px !important; }
+
+  /* Rodapé em coluna única com respiro */
+  footer [style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 26px !important; }
+
+  /* Lightbox: fechar sempre alcançável com o polegar */
+  [role="dialog"] button {
+    top: auto !important;
+    bottom: 22px !important;
+    right: 50% !important;
+    transform: translateX(50%);
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  /* Instagram: um post por linha */
+  .instagram-media { min-width: 0 !important; width: 100% !important; }
+}
+
+/* ---------- Celular estreito ---------- */
+@media (max-width: 480px) {
+  section { padding-left: 15px !important; padding-right: 15px !important; }
+  header { padding-left: 12px !important; padding-right: 12px !important; }
+  /* Wordmark reduzido para o CTA caber com folga */
+  header a[aria-label] > span:last-child > span:first-child { font-size: 19px !important; }
+  header a[aria-label] > span:last-child > span:last-child { font-size: 10px !important; letter-spacing: .26em !important; }
+  header img { width: 38px !important; height: 38px !important; }
+  header > nav > a[href*="whatsapp"] { padding: 10px 14px !important; font-size: 13.5px !important; }
+
+  /* Botões de ação em largura cheia */
+  section > div > div[style*="flex-wrap: wrap"] > a[style*="border-radius: 999px"] {
+    width: 100%;
+    text-align: center;
+  }
+  section [style*="border-top"][style*="flex-wrap: wrap"] { gap: 18px 28px !important; }
+  video { max-height: min(60vh, 620px) !important; max-width: 100% !important; }
+  [style*="overflow-x: auto"] > article { flex-basis: 88vw !important; }
+}
