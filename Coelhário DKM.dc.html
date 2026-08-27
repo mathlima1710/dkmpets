@@ -25,7 +25,12 @@
   img, video, iframe, blockquote { max-width: 100%; }
   h1, h2, h3, p, blockquote, span, strong, li { overflow-wrap: break-word; }
 }
+[data-gal-nav] { display: none !important; }
 @media (max-width: 900px) {
+  [data-carrossel] { display: flex !important; grid-template-columns: none !important; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  [data-carrossel]::-webkit-scrollbar { display: none; }
+  [data-carrossel] > * { flex: 0 0 100%; scroll-snap-align: center; }
+  [data-gal-nav] { display: flex !important; }
   body header { padding-left: 14px !important; padding-right: 14px !important; gap: 10px !important; flex-wrap: nowrap !important; }
   header > nav { flex-wrap: nowrap !important; gap: 8px !important; justify-content: flex-end !important; overflow: visible !important; }
   header img { width: 42px !important; height: 42px !important; }
@@ -216,7 +221,7 @@ a:hover { color: #7E3B1F; }
       </div>
       <a href="https://api.whatsapp.com/send?phone=5511992715519&amp;text=Oi,%20Kau%C3%A3!%20Quero%20entrar%20na%20lista%20de%20espera%20de%20filhotes%20do%20Coelh%C3%A1rio%20DKM." target="_blank" rel="noopener" style="padding: 15px 28px; border-radius: 999px; background: #7C8C6A; color: #FFFDF7; font-weight: 700" style-hover="background: #A8532F; color: #FFFDF7">Lista de espera</a>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(212px, 1fr)); gap: 16px">
+    <div data-carrossel="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(212px, 1fr)); gap: 16px">
       <sc-for list="{{ galeria }}" as="g" hint-placeholder-count="9">
         <button type="button" onClick="{{ g.onClick }}" title="Ampliar imagem" data-reveal style="padding: 0; border: none; background: #F4EEDF; border-radius: 20px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 5">
           <img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.8,.2,1)" style-hover="transform: scale(1.07)">
@@ -367,6 +372,7 @@ class Component extends DCLogic {
     window.addEventListener('keydown', this.onKey);
     window.addEventListener('hashchange', this.onHash);
     this.setupReveal();
+    this.montarCarrosseis();
   }
 
   componentWillUnmount() {
@@ -400,6 +406,46 @@ class Component extends DCLogic {
         }
       });
     }, 120);
+  }
+
+  montarCarrosseis() {
+    const acc = this.props.accentColor || '#A8532F';
+    const rodar = () => {
+      document.querySelectorAll('[data-carrossel]').forEach((car) => {
+        if (car.dataset.navPronto || car.children.length < 2) return;
+        car.dataset.navPronto = '1';
+        const nav = document.createElement('div');
+        nav.setAttribute('data-gal-nav', '1');
+        nav.style.cssText = 'align-items:center;justify-content:center;gap:16px;margin-top:16px';
+        const cont = document.createElement('span');
+        cont.style.cssText = 'font-size:14px;letter-spacing:.08em;opacity:.7;min-width:56px;text-align:center';
+        const atualizar = () => {
+          const total = car.children.length;
+          const i = Math.round(car.scrollLeft / Math.max(1, car.clientWidth)) + 1;
+          cont.textContent = Math.min(i, total) + ' / ' + total;
+        };
+        const botao = (txt, dir, rotulo) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.textContent = txt;
+          b.setAttribute('aria-label', rotulo);
+          b.style.cssText = 'width:46px;height:46px;border-radius:50%;border:1px solid ' + acc + ';background:transparent;color:' + acc + ';font-size:18px;cursor:pointer;flex:0 0 auto';
+          b.addEventListener('click', () => {
+            car.scrollBy({ left: dir * car.clientWidth, behavior: 'smooth' });
+          });
+          return b;
+        };
+        car.addEventListener('scroll', atualizar, { passive: true });
+        nav.appendChild(botao('\u2190', -1, 'Imagem anterior'));
+        nav.appendChild(cont);
+        nav.appendChild(botao('\u2192', 1, 'Próxima imagem'));
+        car.parentNode.insertBefore(nav, car.nextSibling);
+        atualizar();
+      });
+    };
+    rodar();
+    setTimeout(rodar, 500);
+    setTimeout(rodar, 1500);
   }
 
   processarFeed() {
