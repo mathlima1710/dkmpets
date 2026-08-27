@@ -22,9 +22,58 @@
 <link rel="preconnect" href="https://assets.zyrosite.com">
 <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 <script async src="https://www.instagram.com/embed.js"></script>
-<link rel="stylesheet" href="mobile/mobile.css">
 <script src="./image-slot.js"></script>
 <style>
+@media (max-width: 1023px) {
+  body { max-width: 100%; overflow-x: clip; }
+  img, video, iframe, blockquote { max-width: 100%; }
+  h1, h2, h3, p, blockquote, span, strong, li { overflow-wrap: break-word; }
+}
+@media (max-width: 900px) {
+  body header { padding-left: 14px !important; padding-right: 14px !important; gap: 10px !important; flex-wrap: nowrap !important; }
+  header > nav { flex-wrap: nowrap !important; gap: 8px !important; justify-content: flex-end !important; overflow: visible !important; }
+  header img { width: 42px !important; height: 42px !important; }
+  header button[aria-label] > span:last-child, header a[aria-label] > span:last-child { padding-left: 10px !important; gap: 8px !important; }
+  [data-menu-toggle] { display: flex !important; flex: 0 0 auto; }
+  [data-nav-links] { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column !important; align-items: stretch !important; gap: 2px !important; padding: 8px 16px 16px !important; background: rgba(253, 252, 222, .98); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(105, 53, 9, .14); box-shadow: 0 24px 40px -28px rgba(58, 34, 8, .7); }
+  [data-nav-links] > * { width: 100%; min-height: 46px; display: flex !important; align-items: center; text-align: left; justify-content: flex-start; border-bottom: none !important; font-size: 16px !important; }
+  [data-nav-links="0"] { display: none !important; }
+  [data-nav-links="1"] { display: flex !important; }
+  [data-nav-social] { display: none !important; }
+  header > nav > a[href*="whatsapp"] { flex: 0 0 auto; min-height: 44px; display: inline-flex !important; align-items: center; padding: 11px 16px !important; font-size: 14.5px !important; white-space: nowrap; }
+  section { padding-left: 18px !important; padding-right: 18px !important; padding-top: clamp(44px, 9vw, 72px) !important; padding-bottom: clamp(44px, 9vw, 72px) !important; }
+  section > div { gap: clamp(22px, 5vw, 34px) !important; }
+  main > section:first-child { min-height: 76vh !important; }
+  video { width: auto !important; height: auto !important; aspect-ratio: auto !important; max-width: min(100%, 400px) !important; max-height: min(70vh, 700px) !important; object-fit: contain !important; display: block !important; margin-left: auto !important; margin-right: auto !important; background: #1B1104; }
+  section video[data-autoplay] { position: absolute !important; inset: 0 !important; width: 100% !important; max-width: none !important; height: 100% !important; max-height: none !important; margin: 0 !important; object-fit: cover !important; }
+  section [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  section article > div:first-child { order: 2 !important; }
+  section article > div:last-child { order: 1 !important; }
+  [style*="overflow-x: auto"] > article { flex-basis: 84vw !important; }
+  button { min-height: 44px; }
+  h1 { font-size: clamp(30px, 8.4vw, 44px) !important; line-height: 1.08 !important; max-width: none !important; }
+  h2 { font-size: clamp(25px, 6.6vw, 34px) !important; line-height: 1.14 !important; }
+  h3 { font-size: clamp(19px, 5vw, 23px) !important; }
+  p, blockquote, li { font-size: 16px !important; line-height: 1.7 !important; }
+  section img[style*="object-fit: contain"] { height: 50px !important; }
+  div[style*="position: absolute"][style*="bottom: -24px"], div[style*="position: absolute"][style*="bottom: -22px"] { position: static !important; margin-top: 14px; max-width: none !important; }
+  img[style*="150px"] { border-radius: 20px !important; }
+  footer [style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 26px !important; }
+  [role="dialog"] button { top: auto !important; bottom: 22px !important; right: 50% !important; transform: translateX(50%); width: 52px !important; height: 52px !important; }
+  .instagram-media { min-width: 0 !important; width: 100% !important; }
+}
+@media (max-width: 480px) {
+  section { padding-left: 15px !important; padding-right: 15px !important; }
+  header { padding-left: 12px !important; padding-right: 12px !important; }
+  header button[aria-label] > span:last-child > span:first-child { font-size: 19px !important; }
+  header button[aria-label] > span:last-child > span:last-child { font-size: 10px !important; letter-spacing: .26em !important; }
+  header img { width: 38px !important; height: 38px !important; }
+  header > nav > a[href*="whatsapp"] { padding: 10px 14px !important; font-size: 13.5px !important; }
+  section > div > div[style*="flex-wrap: wrap"] > a[style*="border-radius: 999px"] { width: 100%; text-align: center; }
+  section [style*="border-top"][style*="flex-wrap: wrap"] { gap: 18px 28px !important; }
+  video { max-height: min(60vh, 620px) !important; max-width: 100% !important; }
+  [style*="overflow-x: auto"] > article { flex-basis: 88vw !important; }
+}
 body { margin: 0; background: #FDFCDE; font-family: 'PT Serif', Georgia, serif; color: #3A2208; -webkit-font-smoothing: antialiased; }
 * { box-sizing: border-box; }
 a { color: #B0761A; text-decoration: none; }
@@ -80,7 +129,7 @@ input, textarea, select, button { font-family: inherit; }
 <sc-if value="{{ ehInicio }}" hint-placeholder-val="{{ true }}">
 <main data-screen-label="Início">
   <section style="position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; padding: clamp(48px, 8vw, 110px) clamp(20px, 5vw, 72px) clamp(52px, 6vw, 86px)">
-    <video src="uploads/3042471-uhd_2560_1440_30fps.mp4" data-autoplay="1" muted="{{ true }}" playsinline="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: slowZoom 26s ease-in-out infinite alternate"></video>
+    <video src="uploads/3042471-uhd_2560_1440_30fps.mp4" data-autoplay="1" muted="{{ true }}" playsInline="{{ true }}" webkit-playsinline="true" disablePictureInPicture="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: slowZoom 26s ease-in-out infinite alternate"></video>
     <div style="position: absolute; inset: 0; background: linear-gradient(105deg, rgba(30, 17, 4, .84) 0%, rgba(30, 17, 4, .5) 46%, rgba(30, 17, 4, .68) 100%)"></div>
     <div style="position: relative; width: 100%; max-width: 1340px; margin: 0 auto; display: grid; gap: 28px">
       <span data-reveal style="display: inline-flex; align-items: center; gap: 12px; width: fit-content; padding: 9px 18px; border: 1px solid rgba(250, 217, 31, .5); border-radius: 999px; color: #FAD91F; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase">Osasco • Grande São Paulo • desde 2022</span>
@@ -196,6 +245,36 @@ input, textarea, select, button { font-family: inherit; }
         <sc-for list="{{ galeria }}" as="g" hint-placeholder-count="7">
           <button type="button" onClick="{{ g.onClick }}" title="Ampliar imagem" data-reveal style="position: relative; padding: 0; border: none; background: #FDFCDE; border-radius: 20px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 5">
             <img src="{{ g.src }}" alt="{{ g.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.8,.2,1)" style-hover="transform: scale(1.07)">
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Aquiles" style="padding: clamp(72px, 8vw, 132px) clamp(20px, 5vw, 72px); background: #1F1304; color: #FFFDF2">
+    <div style="max-width: 1340px; margin: 0 auto; display: grid; gap: clamp(34px, 4vw, 56px)">
+      <div data-reveal style="display: grid; gap: 12px; justify-items: center; text-align: center">
+        <span style="font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase; color: #C9A227">Em memória</span>
+        <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(32px, 4vw, 56px); line-height: 1.08; color: #FFFDF2">Aquiles — o Kiki</h2>
+        <p style="margin: 0; font-size: 16px; letter-spacing: .1em; color: rgba(255, 253, 242, .6)">2021 — 1º de julho de 2026</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 4vw, 60px); align-items: center">
+        <div data-reveal style="display: grid; justify-items: center">
+          <img src="assets/kiki-40.jpeg" alt="Kauã beijando a testa do Aquiles, o Kiki, American Bully" loading="lazy" style="width: 100%; max-width: 460px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; box-shadow: 0 50px 90px -54px rgba(0, 0, 0, .95)">
+        </div>
+        <div data-reveal style="display: grid; gap: 20px">
+          <p style="margin: 0; font-size: clamp(19px, 1.9vw, 25px); line-height: 1.6; color: #FFFDF2; font-family: 'Volkhov', Georgia, serif; font-style: italic">“Eu passei cinco anos querendo que você fosse perfeito. Você já era, desde o primeiro dia — eu é que demorei a enxergar.”</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.78; color: rgba(255, 253, 242, .82)">O Kiki chegou em 2021 e virou o meu filho. Sou adestrador, e talvez por isso tenha cobrado tanto dele: queria um cão impecável, sem um único defeito. Hoje eu sei que ele nunca precisou provar nada. Puxar no passeio, latir para as visitas — nada disso importa. Por mim, ele podia morder quem quisesse. Eu amava cada pedaço daquele cachorro, inclusive o que eu insistia em chamar de erro.</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.78; color: rgba(255, 253, 242, .82)">Enfrentamos juntos as doenças crônicas, e eu virei especialista no corpo dele porque amar também é isso. A dermatite tratada com o medicamento certo, a alimentação certa, a caminha que reduzia o atrito, o banho terapêutico com sabonete de enxofre e barba de timão seguido do shampoo neutro. Cada detalhe existiu por um motivo só: dar a ele a melhor vida que eu fosse capaz de dar.</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.78; color: rgba(255, 253, 242, .82)">Em 2026 uma hérnia de disco passou a pressionar a medula. Não conseguimos fazer os exames necessários para a ressonância e a cirurgia, e o quadro evoluiu para uma mielomalácia ascendente — condição a que os American Bully têm predisposição. Ele ficou paraplégico, depois tetraplégico. Quando alcançou o tórax, entrou em hipóxia e partiu no dia 1º de julho de 2026, nos meus braços, exatamente onde ele merecia estar.</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.78; color: rgba(255, 253, 242, .82)">Cinco anos passaram como cinco segundos. Tudo o que eu faço hoje por cada animal que chega até mim tem um pouco dele dentro — o Kiki é a razão de eu levar esse trabalho tão a sério.</p>
+          <p style="margin: 0; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.7; color: #C9A227; font-family: 'Volkhov', Georgia, serif">Você foi perfeito, meu filho. Eu te amo e vou te amar para sempre — e você se foi sabendo disso.</p>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px">
+        <sc-for list="{{ kiki }}" as="k" hint-placeholder-count="5">
+          <button type="button" onClick="{{ k.onClick }}" title="Ampliar imagem" data-reveal style="padding: 0; border: none; background: rgba(255, 253, 242, .06); border-radius: 18px; overflow: hidden; cursor: zoom-in; aspect-ratio: 1 / 1">
+            <img src="{{ k.src }}" alt="{{ k.alt }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.8,.2,1)" style-hover="transform: scale(1.06)">
           </button>
         </sc-for>
       </div>
@@ -337,7 +416,7 @@ input, textarea, select, button { font-family: inherit; }
         <div data-reveal style="display: grid; gap: 16px">
           <sc-for list="{{ videosNina }}" as="v" hint-placeholder-count="4">
             <figure style="margin: 0; display: grid; gap: 11px; padding: 16px; background: rgba(255, 253, 242, .05); border: 1px solid rgba(250, 217, 31, .24); border-radius: 22px">
-              <video src="{{ v.src }}" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsinline="{{ true }}" style="width: 100%; max-height: 520px; border-radius: 14px; background: #1B1104"></video>
+              <video src="{{ v.src }}" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsInline="{{ true }}" webkit-playsinline="true" disablePictureInPicture="{{ true }}" style="width: 100%; max-height: 520px; border-radius: 14px; background: #1B1104"></video>
               <figcaption style="display: grid; gap: 4px">
                 <strong style="font-family: 'Volkhov', Georgia, serif; font-size: 16px; color: #FAD91F">{{ v.fase }}</strong>
                 <span style="font-size: 14.5px; line-height: 1.6; color: rgba(255, 253, 242, .75)">{{ v.legenda }}</span>
@@ -869,6 +948,13 @@ class Component extends DCLogic {
       setPet: (e) => this.setState({ form: Object.assign({}, f, { pet: e.target.value }) }),
       setMsg: (e) => this.setState({ form: Object.assign({}, f, { msg: e.target.value }) }),
       formLink: 'https://api.whatsapp.com/send?phone=5511992715519&text=' + encodeURIComponent(msgForm),
+      kiki: [
+        { f: 'assets/kiki-37.jpeg', alt: 'Kiki descansando no sofá ao lado de um Dachshund' },
+        { f: 'assets/kiki-38.jpeg', alt: 'Kiki dormindo abraçado a um Dachshund' },
+        { f: 'assets/kiki-39.jpeg', alt: 'Kiki dormindo tranquilo no sofá de casa' },
+        { f: 'assets/kiki-41.jpeg', alt: 'Kauã e Kiki juntos, em preto e branco' },
+        { f: 'assets/kiki-42.jpeg', alt: 'Kiki descansando na caminha ortopédica durante o tratamento' }
+      ].map((k) => ({ src: k.f, alt: k.alt, onClick: () => this.setState({ lightbox: k.f, lightboxAlt: k.alt }) })),
       feedRef: (el) => { this.feedEl = el; if (el) this.processarFeed(); },
       feedEmbeds: this.feedEmbeds('@dkmpets'),
       lightbox: st.lightbox,

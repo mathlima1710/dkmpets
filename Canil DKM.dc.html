@@ -19,8 +19,51 @@
 <meta property="og:locale" content="pt_BR">
 <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 <script async src="https://www.instagram.com/embed.js"></script>
-<link rel="stylesheet" href="mobile/mobile.css">
 <style>
+@media (max-width: 1023px) {
+  body { max-width: 100%; overflow-x: clip; }
+  img, video, iframe, blockquote { max-width: 100%; }
+  h1, h2, h3, p, blockquote, span, strong, li { overflow-wrap: break-word; }
+}
+@media (max-width: 900px) {
+  body header { padding-left: 14px !important; padding-right: 14px !important; gap: 10px !important; flex-wrap: nowrap !important; }
+  header > nav { flex-wrap: nowrap !important; gap: 8px !important; justify-content: flex-end !important; overflow: visible !important; }
+  header img { width: 42px !important; height: 42px !important; }
+  header a[aria-label] > span:last-child { padding-left: 10px !important; gap: 8px !important; }
+  [data-menu-toggle] { display: flex !important; flex: 0 0 auto; }
+  [data-nav-links] { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column !important; align-items: stretch !important; gap: 2px !important; padding: 8px 16px 16px !important; background: rgba(24, 15, 4, .98); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(250, 217, 31, .2); box-shadow: 0 24px 40px -28px rgba(0, 0, 0, .8); }
+  [data-nav-links] > * { width: 100%; min-height: 46px; display: flex !important; align-items: center; text-align: left; justify-content: flex-start; border-bottom: none !important; font-size: 16px !important; }
+  [data-nav-links="0"] { display: none !important; }
+  [data-nav-links="1"] { display: flex !important; }
+  [data-nav-social] { display: none !important; }
+  header > nav > a[href*="whatsapp"] { flex: 0 0 auto; min-height: 44px; display: inline-flex !important; align-items: center; padding: 11px 16px !important; font-size: 14.5px !important; white-space: nowrap; }
+  section { padding-left: 18px !important; padding-right: 18px !important; padding-top: clamp(44px, 9vw, 72px) !important; padding-bottom: clamp(44px, 9vw, 72px) !important; }
+  section > div { gap: clamp(22px, 5vw, 34px) !important; }
+  section:first-of-type { min-height: 76vh !important; }
+  video { width: auto !important; height: auto !important; aspect-ratio: auto !important; max-width: min(100%, 400px) !important; max-height: min(70vh, 700px) !important; object-fit: contain !important; display: block !important; margin-left: auto !important; margin-right: auto !important; background: #1B1104; }
+  section video[data-autoplay] { position: absolute !important; inset: 0 !important; width: 100% !important; max-width: none !important; height: 100% !important; max-height: none !important; margin: 0 !important; object-fit: cover !important; }
+  section [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  [style*="overflow-x: auto"] > article { flex-basis: 84vw !important; }
+  button { min-height: 44px; }
+  h1 { font-size: clamp(30px, 8.4vw, 44px) !important; line-height: 1.08 !important; max-width: none !important; }
+  h2 { font-size: clamp(25px, 6.6vw, 34px) !important; line-height: 1.14 !important; }
+  h3 { font-size: clamp(19px, 5vw, 23px) !important; }
+  p, blockquote, li { font-size: 16px !important; line-height: 1.7 !important; }
+  section img[style*="object-fit: contain"] { height: 50px !important; }
+  footer [style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 26px !important; }
+  [role="dialog"] button { top: auto !important; bottom: 22px !important; right: 50% !important; transform: translateX(50%); width: 52px !important; height: 52px !important; }
+  .instagram-media { min-width: 0 !important; width: 100% !important; }
+}
+@media (max-width: 480px) {
+  section { padding-left: 15px !important; padding-right: 15px !important; }
+  header { padding-left: 12px !important; padding-right: 12px !important; }
+  header a[aria-label] > span:last-child > span:first-child { font-size: 19px !important; }
+  header a[aria-label] > span:last-child > span:last-child { font-size: 10px !important; letter-spacing: .26em !important; }
+  header img { width: 38px !important; height: 38px !important; }
+  header > nav > a[href*="whatsapp"] { padding: 10px 14px !important; font-size: 13.5px !important; }
+  video { max-height: min(60vh, 620px) !important; max-width: 100% !important; }
+  [style*="overflow-x: auto"] > article { flex-basis: 88vw !important; }
+}
 body { margin: 0; background: #F7F0DC; font-family: 'PT Serif', Georgia, serif; color: #3A2208; -webkit-font-smoothing: antialiased; }
 * { box-sizing: border-box; }
 a { color: #B4531D; text-decoration: none; }
@@ -68,7 +111,7 @@ a:hover { color: #8A3D12; }
 <div style="{{ espacoTopo }}"></div>
 
 <section data-screen-label="Portal" style="position: relative; min-height: 92vh; display: flex; align-items: flex-end; overflow: hidden; padding: clamp(52px, 8vw, 120px) clamp(20px, 5vw, 72px) clamp(56px, 6vw, 88px)">
-  <video src="assets/peter-edit.mp4" data-autoplay="1" muted="{{ true }}" playsinline="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: slowPan 30s ease-in-out infinite alternate"></video>
+  <video src="assets/peter-edit.mp4" data-autoplay="1" muted="{{ true }}" playsInline="{{ true }}" webkit-playsinline="true" disablePictureInPicture="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: slowPan 30s ease-in-out infinite alternate"></video>
   <div style="position: absolute; inset: 0; background: linear-gradient(112deg, rgba(20, 12, 3, .94) 0%, rgba(20, 12, 3, .74) 46%, rgba(20, 12, 3, .88) 100%)"></div>
   <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20, 12, 3, .92) 0%, rgba(20, 12, 3, .55) 42%, rgba(20, 12, 3, .3) 100%)"></div>
   <div style="position: relative; width: 100%; max-width: 1340px; margin: 0 auto; display: grid; gap: 26px">
@@ -204,7 +247,7 @@ a:hover { color: #8A3D12; }
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(276px, 1fr)); gap: 18px">
       <sc-for list="{{ videosPeter }}" as="v" hint-placeholder-count="4">
         <figure style="margin: 0; display: grid; gap: 12px; padding: 16px; background: #FFFDF2; border: 1px solid rgba(105, 53, 9, .13); border-radius: 20px">
-          <video src="{{ v.src }}" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsinline="{{ true }}" style="width: 100%; max-height: 560px; border-radius: 14px; background: #241705"></video>
+          <video src="{{ v.src }}" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsInline="{{ true }}" webkit-playsinline="true" disablePictureInPicture="{{ true }}" style="width: 100%; max-height: 560px; border-radius: 14px; background: #241705"></video>
           <figcaption style="font-size: 14.5px; line-height: 1.6; color: #6B4A1E">{{ v.legenda }}</figcaption>
         </figure>
       </sc-for>
@@ -257,7 +300,7 @@ a:hover { color: #8A3D12; }
       <p style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #8A6634">Orientação de manejo, não substitui avaliação veterinária individual.</p>
     </div>
     <figure data-reveal style="margin: 0; display: grid; gap: 12px; padding: 18px; background: #F7F0DC; border: 1px solid rgba(105, 53, 9, .13); border-radius: 24px">
-      <video src="assets/passeio-guia-16.mp4" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsinline="{{ true }}" style="width: 100%; max-height: 620px; border-radius: 16px; background: #241705"></video>
+      <video src="assets/passeio-guia-16.mp4" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsInline="{{ true }}" webkit-playsinline="true" disablePictureInPicture="{{ true }}" style="width: 100%; max-height: 620px; border-radius: 16px; background: #241705"></video>
       <figcaption style="font-size: 14.5px; line-height: 1.6; color: #6B4A1E">Passeio conduzido na guia, junto de outros cães — exercício regular e sem impacto é o melhor aliado da coluna.</figcaption>
     </figure>
   </div>
