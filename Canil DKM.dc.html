@@ -8,12 +8,12 @@
 <body>
 <x-dc>
 <helmet>
-<title>Canil DKM — Criação de Dachshund com afixo CBKC | Osasco, SP</title>
-<meta name="description" content="Canil DKM: criação responsável de Dachshund (Teckel) com afixo registrado na CBKC e acompanhamento no Kennel Clube de São Paulo. História da raça, padrão oficial FCI nº 148, plantel, ninhadas e guia do novo tutor.">
-<meta name="keywords" content="canil Dachshund, Teckel, afixo CBKC, Kennel Clube São Paulo, filhote de Dachshund, padrão FCI 148, criação responsável">
+<title>Canil DKM: criação de Dachshund com registro na CBKC | Osasco, SP</title>
+<meta name="description" content="Canil DKM: criação responsável de Dachshund (Teckel) com registro na CBKC e acompanhamento no Kennel Club de São Paulo. História da raça, padrão oficial FCI nº 148, plantel, ninhadas e guia do novo tutor.">
+<meta name="keywords" content="canil Dachshund, Teckel, registro CBKC, Kennel Club São Paulo, filhote de Dachshund, padrão FCI 148, criação responsável">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://dkmpets.com.br/canil-dkm">
-<meta property="og:title" content="Canil DKM — Criação de Dachshund com afixo CBKC">
+<meta property="og:title" content="Canil DKM: criação de Dachshund com registro na CBKC">
 <meta property="og:description" content="História, padrão oficial, plantel e ninhadas de Dachshund. Criação responsável em Osasco, SP.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -41,7 +41,12 @@
   section > div { gap: clamp(22px, 5vw, 34px) !important; }
   section:first-of-type { min-height: 76vh !important; }
   video { width: auto !important; height: auto !important; aspect-ratio: auto !important; max-width: min(100%, 400px) !important; max-height: min(70vh, 700px) !important; object-fit: contain !important; display: block !important; margin-left: auto !important; margin-right: auto !important; background: #1B1104; }
-  section video[data-autoplay] { position: absolute !important; inset: 0 !important; width: 100% !important; max-width: none !important; height: 100% !important; max-height: none !important; margin: 0 !important; object-fit: cover !important; }
+  section video[data-autoplay] { position: absolute !important; inset: 0 !important; width: 100% !important; max-width: none !important; height: 100% !important; max-height: none !important; margin: 0 !important; object-fit: cover !important; object-position: center 28% !important; }
+  /* Mobile: hero mais alto e véu bem mais leve, para o vídeo aparecer */
+  section:first-of-type { min-height: 88vh !important; align-items: flex-end !important; }
+  [data-hero-veil="1"] { background: linear-gradient(180deg, rgba(20, 12, 3, .3) 0%, rgba(20, 12, 3, .1) 34%, rgba(20, 12, 3, .2) 100%) !important; }
+  [data-hero-veil="2"] { background: linear-gradient(0deg, rgba(20, 12, 3, .94) 0%, rgba(20, 12, 3, .82) 30%, rgba(20, 12, 3, .28) 56%, rgba(20, 12, 3, 0) 100%) !important; }
+  section:first-of-type > div:last-of-type { padding-top: 34vh !important; }
   section [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   [style*="overflow-x: auto"] > article { flex-basis: 84vw !important; }
   button { min-height: 44px; }
@@ -75,7 +80,7 @@ a:hover { color: #8A3D12; }
 @keyframes bobDown { 0%,100% { transform: translateY(0); opacity: .8 } 50% { transform: translateY(9px); opacity: .35 } }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Canil DKM","parentOrganization":{"@type":"LocalBusiness","name":"DKM Pets"},"url":"https://dkmpets.com.br/canil-dkm","description":"Criação responsável de Dachshund (Teckel) com afixo registrado na CBKC e acompanhamento no Kennel Clube de São Paulo.","email":"contato@dkmpets.com.br","telephone":"+55 11 99271-5519","address":{"@type":"PostalAddress","addressLocality":"Osasco","addressRegion":"SP","addressCountry":"BR"}}
+{"@context":"https://schema.org","@type":"Organization","name":"Canil DKM","parentOrganization":{"@type":"LocalBusiness","name":"DKM Pets"},"url":"https://dkmpets.com.br/canil-dkm","description":"Criação responsável de Dachshund (Teckel) com registro na CBKC e acompanhamento no Kennel Club de São Paulo.","email":"contato@dkmpets.com.br","telephone":"+55 11 99271-5519","address":{"@type":"PostalAddress","addressLocality":"Osasco","addressRegion":"SP","addressCountry":"BR"}}
 </script>
 </helmet>
 
@@ -84,7 +89,7 @@ a:hover { color: #8A3D12; }
 </div>
 
 <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; padding: 12px clamp(20px, 5vw, 72px); background: rgba(24, 15, 4, .92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(250, 217, 31, .18)">
-  <a href="./DKM Pets.dc.html" aria-label="DKM Pets — página inicial" style="display: flex; align-items: center; gap: 14px">
+  <a href="./DKM Pets.dc.html" aria-label="DKM Pets, página inicial" style="display: flex; align-items: center; gap: 14px">
     <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=160,fit=crop/YZ9VzLDaD2IxW987/img_9317-fotor-bg-remover-20241030213137-A85wLrzykqF4M895.png" alt="Logo da DKM Pets" width="50" height="50" style="width: 50px; height: 50px; object-fit: contain">
     <span style="display: flex; align-items: center; gap: 11px; padding-left: 14px; border-left: 1px solid rgba(250, 217, 31, .28)">
       <span style="font-family: 'Volkhov', Georgia, serif; font-weight: 700; font-size: 22px; line-height: 1; color: #FFFDF2">DKM</span>
@@ -112,12 +117,12 @@ a:hover { color: #8A3D12; }
 
 <section data-screen-label="Portal" style="position: relative; min-height: 92vh; display: flex; align-items: flex-end; overflow: hidden; padding: clamp(52px, 8vw, 120px) clamp(20px, 5vw, 72px) clamp(56px, 6vw, 88px)">
   <video src="assets/peter-edit.mp4" data-autoplay="1" muted="{{ true }}" playsInline="{{ true }}" webkit-playsinline="true" disablePictureInPicture="{{ true }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: slowPan 30s ease-in-out infinite alternate"></video>
-  <div style="position: absolute; inset: 0; background: linear-gradient(112deg, rgba(20, 12, 3, .94) 0%, rgba(20, 12, 3, .74) 46%, rgba(20, 12, 3, .88) 100%)"></div>
-  <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20, 12, 3, .92) 0%, rgba(20, 12, 3, .55) 42%, rgba(20, 12, 3, .3) 100%)"></div>
+  <div data-hero-veil="1" style="position: absolute; inset: 0; background: linear-gradient(112deg, rgba(20, 12, 3, .78) 0%, rgba(20, 12, 3, .42) 48%, rgba(20, 12, 3, .66) 100%)"></div>
+  <div data-hero-veil="2" style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20, 12, 3, .88) 0%, rgba(20, 12, 3, .34) 46%, rgba(20, 12, 3, .06) 100%)"></div>
   <div style="position: relative; width: 100%; max-width: 1340px; margin: 0 auto; display: grid; gap: 26px">
-    <span data-reveal style="display: inline-flex; align-items: center; gap: 12px; width: fit-content; padding: 9px 18px; border: 1px solid rgba(250, 217, 31, .5); border-radius: 999px; color: #FAD91F; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase">Canil DKM • afixo registrado na CBKC</span>
+    <span data-reveal style="display: inline-flex; align-items: center; gap: 12px; width: fit-content; padding: 9px 18px; border: 1px solid rgba(250, 217, 31, .5); border-radius: 999px; color: #FAD91F; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase">Canil DKM • com registro na CBKC</span>
     <h1 data-reveal style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(40px, 7vw, 100px); line-height: .98; color: #FFFDF2; max-width: 17ch; text-wrap: pretty">Bem-vindo ao território <em style="font-style: italic; color: #FAD91F">Dachshund</em></h1>
-    <p data-reveal style="margin: 0; max-width: 60ch; font-size: clamp(17px, 1.5vw, 22px); line-height: 1.6; color: rgba(255, 253, 242, .88)">Um cão criado para descer onde ninguém desce. Aqui você atravessa a raça de ponta a ponta — origem alemã, padrão oficial da FCI, nosso plantel e o caminho até o seu filhote.</p>
+    <p data-reveal style="margin: 0; max-width: 60ch; font-size: clamp(17px, 1.5vw, 22px); line-height: 1.6; color: rgba(255, 253, 242, .88)">Um cão criado para descer onde ninguém desce. Aqui você atravessa a raça de ponta a ponta: origem alemã, padrão oficial da FCI, nosso plantel e o caminho até o seu filhote.</p>
     <div data-reveal style="display: flex; flex-wrap: wrap; gap: 14px">
       <a href="#plantel" style="padding: 17px 32px; border-radius: 999px; background: #FAD91F; color: #3A2208; font-weight: 700; font-size: 17px" style-hover="background: #FFE768; color: #3A2208">Conhecer o plantel</a>
       <a href="#ninhadas" style="padding: 17px 32px; border-radius: 999px; border: 1px solid rgba(255, 253, 242, .45); color: #FFFDF2; font-size: 17px" style-hover="border-color: #FAD91F; color: #FAD91F">Ninhadas e reserva</a>
@@ -130,10 +135,10 @@ a:hover { color: #8A3D12; }
 
 <section aria-label="Registros" style="padding: 26px clamp(20px, 5vw, 72px); background: #241705">
   <div style="max-width: 1340px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
-    <p style="margin: 0; max-width: 52ch; font-size: 15px; line-height: 1.65; color: rgba(255, 253, 242, .82)">Criação com <strong style="color: #FAD91F">afixo DKM registrado na CBKC</strong> — Confederação Brasileira de Cinofilia — e acompanhamento junto ao Kennel Clube de São Paulo, entidade filiada.</p>
+    <p style="margin: 0; max-width: 52ch; font-size: 15px; line-height: 1.65; color: rgba(255, 253, 242, .82)">Criação com <strong style="color: #FAD91F">registro na CBKC</strong>, a Confederação Brasileira de Cinofilia, e acompanhamento junto ao Kennel Club de São Paulo, entidade filiada.</p>
     <div style="display: flex; align-items: center; gap: 22px">
-      <img src="assets/cbkc.png" alt="Logo da CBKC — Confederação Brasileira de Cinofilia" loading="lazy" style="height: 64px; width: auto; object-fit: contain">
-      <img src="assets/kcsp.png" alt="Logo do Kennel Clube de São Paulo" loading="lazy" style="height: 60px; width: auto; object-fit: contain">
+      <img src="assets/cbkc.png" alt="Logo da CBKC, Confederação Brasileira de Cinofilia" loading="lazy" style="height: 64px; width: auto; object-fit: contain">
+      <img src="assets/kcsp.png" alt="Logo do Kennel Club de São Paulo" loading="lazy" style="height: 60px; width: auto; object-fit: contain">
     </div>
   </div>
 </section>
@@ -187,7 +192,7 @@ a:hover { color: #8A3D12; }
     <div data-reveal style="display: grid; gap: 16px; max-width: 62ch">
       <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Padrão oficial • FCI nº 148</span>
       <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.6vw, 50px); line-height: 1.1; color: #3A2208">Um cão, nove combinações</h2>
-      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: #6B4A1E">O Dachshund é reconhecido em três tamanhos e três pelagens — e a combinação entre eles define nove variedades oficiais. O tamanho não é medido pela altura, mas pela circunferência do tórax.</p>
+      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: #6B4A1E">O Dachshund é reconhecido em três tamanhos e três pelagens, e a combinação entre eles define nove variedades oficiais. O tamanho não é medido pela altura, mas pela circunferência do tórax.</p>
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: 10px">
       <sc-for list="{{ abas }}" as="a" hint-placeholder-count="2">
@@ -220,7 +225,7 @@ a:hover { color: #8A3D12; }
     <div data-reveal style="display: grid; gap: 15px; max-width: 58ch">
       <span style="font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: #B4531D">Plantel</span>
       <h2 style="margin: 0; font-family: 'Volkhov', Georgia, serif; font-weight: 400; font-size: clamp(31px, 3.6vw, 50px); line-height: 1.1; color: #3A2208">Peter Schwartz'Hause</h2>
-      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: #6B4A1E">Dachshund de pelo longo vermelho, um dos futuros pais do Canil DKM. Cresceu dentro do nosso método de adestramento — socialização de rua, condução na guia e obediência antes de qualquer plano de criação.</p>
+      <p style="margin: 0; font-size: 17.5px; line-height: 1.75; color: #6B4A1E">Dachshund de pelo longo vermelho, um dos futuros pais do Canil DKM. Cresceu dentro do nosso método de adestramento: socialização de rua, condução na guia e obediência antes de qualquer plano de criação.</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(24px, 3vw, 44px); align-items: start">
       <button type="button" onClick="{{ verPeter }}" data-reveal title="Ampliar foto do Peter" style="padding: 0; border: none; background: transparent; border-radius: 26px; overflow: hidden; cursor: zoom-in">
@@ -240,6 +245,8 @@ a:hover { color: #8A3D12; }
           <img src="assets/peter-12.jpeg" alt="Peter em treino de condução na guia" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px">
           <img src="assets/peter-campo.jpeg" alt="Peter observando o campo durante o passeio, conduzido no peitoral" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px">
           <img src="assets/peter-colo.jpeg" alt="Peter recebendo carinho no colo depois do passeio" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px">
+          <img src="assets/peter-sofa-45.jpeg" alt="Peter deitado no sofá de casa" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px">
+          <img src="assets/matilha-36.jpeg" alt="Peter, Max e Lia juntos no sofá" loading="lazy" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px">
         </div>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.72; color: #6B4A1E">Antes de entrar em qualquer programa de criação, um cão precisa provar temperamento em ambiente real: rua, barulho, outros cães e manejo. É o que os vídeos abaixo registram.</p>
       </div>
@@ -301,7 +308,7 @@ a:hover { color: #8A3D12; }
     </div>
     <figure data-reveal style="margin: 0; display: grid; gap: 12px; padding: 18px; background: #F7F0DC; border: 1px solid rgba(105, 53, 9, .13); border-radius: 24px">
       <video src="assets/passeio-guia-16.mp4" controls="{{ true }}" muted="{{ true }}" preload="metadata" playsInline="{{ true }}" webkit-playsinline="true" disablePictureInPicture="{{ true }}" style="width: 100%; max-height: 620px; border-radius: 16px; background: #241705"></video>
-      <figcaption style="font-size: 14.5px; line-height: 1.6; color: #6B4A1E">Passeio conduzido na guia, junto de outros cães — exercício regular e sem impacto é o melhor aliado da coluna.</figcaption>
+      <figcaption style="font-size: 14.5px; line-height: 1.6; color: #6B4A1E">Passeio conduzido na guia, junto de outros cães. Exercício regular e sem impacto é o melhor aliado da coluna.</figcaption>
     </figure>
   </div>
 </section>
@@ -389,7 +396,7 @@ a:hover { color: #8A3D12; }
           <span style="font-family: 'Volkhov', Georgia, serif; font-weight: 700; font-size: 21px; color: #FFFDF2">DKM</span>
           <span style="font-family: 'Volkhov', Georgia, serif; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #FAD91F">Canil</span>
         </span>
-        <p style="margin: 0; font-size: 14.5px; line-height: 1.7">Criação responsável de Dachshund em Osasco — SP, com afixo registrado na CBKC e acompanhamento no Kennel Clube de São Paulo.</p>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.7">Criação responsável de Dachshund em Osasco, SP, com registro na CBKC e acompanhamento no Kennel Club de São Paulo.</p>
       </div>
       <div style="display: grid; gap: 9px; align-content: start; font-size: 14.5px">
         <strong style="color: #FFFDF2; font-family: 'Volkhov', Georgia, serif; font-weight: 400">Nesta página</strong>
@@ -407,7 +414,7 @@ a:hover { color: #8A3D12; }
       </div>
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; padding-top: 20px; border-top: 1px solid rgba(255, 253, 242, .14); font-size: 13px">
-      <span>© 2026 DKM Pets — Canil DKM. Todos os direitos reservados.</span>
+      <span>© 2026 DKM Pets, Canil DKM. Todos os direitos reservados.</span>
       <span>Criar bem é criar com registro.</span>
     </div>
   </div>
@@ -512,7 +519,7 @@ class Component extends DCLogic {
 
   pelagens = [
     { tipo: 'Pelagem', nome: 'Pelo curto (Kurzhaar)', medida: 'Denso, curto e brilhante', texto: 'Pelagem justa ao corpo, sem falhas. Manutenção simples, mas menos proteção térmica em frio intenso.' },
-    { tipo: 'Pelagem', nome: 'Pelo longo (Langhaar)', medida: 'Liso, com franjas', texto: 'Pelo macio com franjas em orelhas, peito, ventre e cauda — a variedade do Peter. Exige escovação regular para evitar nós.' },
+    { tipo: 'Pelagem', nome: 'Pelo longo (Langhaar)', medida: 'Liso, com franjas', texto: 'Pelo macio com franjas em orelhas, peito, ventre e cauda, a variedade do Peter. Exige escovação regular para evitar nós.' },
     { tipo: 'Pelagem', nome: 'Pelo duro (Rauhaar)', medida: 'Áspero, com barba e sobrancelhas', texto: 'Pelagem dura e cerrada com subpelo, barba no focinho e sobrancelhas marcadas. É a variedade mais rústica das três.' }
   ];
 
@@ -615,7 +622,7 @@ class Component extends DCLogic {
       avancarLinha: () => this.rolarLinha(1),
       ficha: [
         { rotulo: 'País de origem', valor: 'Alemanha', nota: 'Raça alemã de caça, desenvolvida para trabalho subterrâneo.' },
-        { rotulo: 'Classificação FCI', valor: 'Grupo 4 — padrão nº 148', nota: 'O Dachshund ocupa sozinho um grupo inteiro na FCI.' },
+        { rotulo: 'Classificação FCI', valor: 'Grupo 4, padrão nº 148', nota: 'O Dachshund ocupa sozinho um grupo inteiro na FCI.' },
         { rotulo: 'Nome alemão', valor: 'Dachshund / Teckel', nota: '"Dachs" (texugo) + "Hund" (cão). Teckel é o nome de uso comum na Alemanha.' },
         { rotulo: 'Variedades', valor: '3 tamanhos × 3 pelagens', nota: 'Standard, Miniatura e Kaninchen; pelo curto, longo e duro.' },
         { rotulo: 'Função original', valor: 'Caça em toca', nota: 'Farejar, perseguir e enfrentar presas dentro de galerias estreitas.' },
@@ -625,20 +632,20 @@ class Component extends DCLogic {
         { quando: 'Séc. XVI–XVIII', titulo: 'Os cães "que rastejam no texugo"', texto: 'Textos de caça alemães descrevem cães baixos e alongados usados contra texugos e raposas, chamados por variações de "Dachs Kriecher". É a raiz funcional do Teckel.' },
         { quando: 'Séc. XIX', titulo: 'Do tipo ao padrão', texto: 'Criadores alemães começam a fixar características: linha de dorso longa, membros curtos, peito profundo, faro apurado e coragem para o confronto na toca.' },
         { quando: '1879', titulo: 'Primeiro padrão escrito', texto: 'A raça ganha um padrão formal na Alemanha, marcando a passagem do cão de trabalho anônimo para raça com critérios de julgamento.' },
-        { quando: '1888', titulo: 'Deutscher Teckelklub', texto: 'A fundação do clube alemão da raça organiza registro, exposições e provas de trabalho — a estrutura que ainda hoje sustenta a criação séria do Teckel.' },
+        { quando: '1888', titulo: 'Deutscher Teckelklub', texto: 'A fundação do clube alemão da raça organiza registro, exposições e provas de trabalho, a estrutura que ainda hoje sustenta a criação séria do Teckel.' },
         { quando: 'Séc. XX', titulo: 'Três pelagens, três tamanhos', texto: 'A seleção consolida pelo curto, longo e duro, e os tamanhos Standard, Miniatura e Kaninchen, este último medido pela circunferência do tórax.' },
-        { quando: 'FCI nº 148', titulo: 'Um grupo só para ele', texto: 'Na Federação Cinológica Internacional, o Dachshund é o único ocupante do Grupo 4 — reconhecimento da sua singularidade morfológica e funcional.' },
-        { quando: 'Brasil', titulo: 'CBKC e clubes filiados', texto: 'No Brasil, o registro genealógico é feito pela CBKC, com clubes filiados como o Kennel Clube de São Paulo organizando exposições e emitindo documentação.' }
+        { quando: 'FCI nº 148', titulo: 'Um grupo só para ele', texto: 'Na Federação Cinológica Internacional, o Dachshund é o único ocupante do Grupo 4, reconhecimento da sua singularidade morfológica e funcional.' },
+        { quando: 'Brasil', titulo: 'CBKC e clubes filiados', texto: 'No Brasil, o registro genealógico é feito pela CBKC, com clubes filiados como o Kennel Club de São Paulo organizando exposições e emitindo documentação.' }
       ],
       abas: ['Tamanhos', 'Pelagens'].map((a) => ({
         label: a, style: this.abaStyle(st.aba === a), onClick: () => this.setState({ aba: a })
       })),
       variedades: st.aba === 'Pelagens' ? this.pelagens : this.tamanhos,
       pontosPadrao: [
-        { titulo: 'Estrutura', texto: 'Corpo longo e compacto, musculoso, com membros curtos — construído para força e mobilidade dentro da toca, nunca para fragilidade.' },
+        { titulo: 'Estrutura', texto: 'Corpo longo e compacto, musculoso, com membros curtos, construído para força e mobilidade dentro da toca, nunca para fragilidade.' },
         { titulo: 'Cabeça e expressão', texto: 'Cabeça alongada e afilada, olhos de expressão atenta e enérgica, orelhas de inserção alta e bem colocadas.' },
         { titulo: 'Movimento', texto: 'Passada rasante e livre, com boa propulsão traseira. Dorso firme durante o movimento é sinal de estrutura correta.' },
-        { titulo: 'Temperamento no padrão', texto: 'O padrão descreve um cão equilibrado, nem agressivo nem medroso — caçador por vocação, companheiro por convivência.' }
+        { titulo: 'Temperamento no padrão', texto: 'O padrão descreve um cão equilibrado, nem agressivo nem medroso: caçador por vocação, companheiro por convivência.' }
       ],
       fichaPeter: [
         { rotulo: 'Nome', valor: "Peter Schwartz'Hause" },
@@ -649,24 +656,28 @@ class Component extends DCLogic {
       ],
       videosPeter: [
         { src: 'assets/peter-10.mp4', legenda: 'Peter em rotina de treino: atenção ao condutor e resposta ao comando.' },
-        { src: 'assets/kaua-peter-14.mp4', legenda: 'Kauã brincando com o Peter — vínculo antes de exigência.' },
+        { src: 'assets/kaua-peter-14.mp4', legenda: 'Kauã brincando com o Peter: vínculo antes de exigência.' },
+        { src: 'assets/peter-edit-48.mp4', legenda: 'Sessão de adestramento do Peter, do comando à execução.' },
+        { src: 'assets/passeio-53.mp4', legenda: 'Passeio com a matilha, cada cão conduzido na guia.' },
+        { src: 'assets/passeio-54.mp4', legenda: 'Rua, barulho e outros cães: socialização em ambiente real.' },
+        { src: 'assets/passeio-55.mp4', legenda: 'Ritmo de caminhada mantido, sem puxar e sem tensão na guia.' },
         { src: 'assets/peter-20.mp4', legenda: 'Passeio em área aberta, com faro liberado e condução na guia.' },
-        { src: 'assets/peter-21.mp4', legenda: 'Resposta ao chamado em ambiente com distração — o teste que importa.' },
+        { src: 'assets/peter-21.mp4', legenda: 'Resposta ao chamado em ambiente com distração: o teste que importa.' },
         { src: 'assets/canil-13.mp4', legenda: 'Dia a dia do canil: manejo tranquilo e contato constante.' },
         { src: 'assets/canil-15.mp4', legenda: 'Convivência entre os cães da casa, base da socialização dos filhotes.' }
       ],
       filhotes: filhotesArq.map((g) => ({ src: g.f, alt: g.alt, onClick: abrir(g.f, g.alt) })),
       verPeter: abrir('assets/peter-9.jpeg', "Peter Schwartz'Hause, Dachshund de pelo longo vermelho"),
       etapas: [
-        { passo: '01', titulo: 'Conversa inicial', texto: 'Entendemos sua rotina, espaço e expectativa antes de falar de filhote. Dachshund não combina com toda casa — e isso se diz na primeira conversa.' },
+        { passo: '01', titulo: 'Conversa inicial', texto: 'Entendemos sua rotina, espaço e expectativa antes de falar de filhote. Dachshund não combina com toda casa, e isso se diz na primeira conversa.' },
         { passo: '02', titulo: 'Planejamento da ninhada', texto: 'Cruzamentos planejados com avaliação de estrutura, saúde e temperamento dos pais, respeitando intervalos entre ninhadas.' },
         { passo: '03', titulo: 'Nascimento em casa', texto: 'Os filhotes nascem e crescem no ambiente doméstico, com acompanhamento diário de peso, mamadas e desenvolvimento.' },
-        { passo: '04', titulo: 'Socialização inicial', texto: 'Sons, pisos diferentes, manuseio, pessoas e outros cães desde as primeiras semanas — o alicerce do cão equilibrado.' },
+        { passo: '04', titulo: 'Socialização inicial', texto: 'Sons, pisos diferentes, manuseio, pessoas e outros cães desde as primeiras semanas: o alicerce do cão equilibrado.' },
         { passo: '05', titulo: 'Escolha e reserva', texto: 'Apresentamos a ninhada com fotos e vídeos reais e ajudamos a casar perfil do filhote com o perfil da família.' },
         { passo: '06', titulo: 'Entrega com documentação', texto: 'Pedigree, vacinação, vermifugação e orientação completa de manejo, alimentação e coluna. Suporte segue depois da entrega.' }
       ],
       cuidados: [
-        'Evitar saltos de sofá, cama e escadas — use rampas ou degraus baixos.',
+        'Evitar saltos de sofá, cama e escadas: use rampas ou degraus baixos.',
         'Erguer sempre apoiando peito e quadril ao mesmo tempo, nunca só pelas axilas.',
         'Manter o peso ideal: cada quilo extra sobrecarrega a coluna longa.',
         'Preferir peitoral a coleira de tração nos passeios.',
@@ -674,7 +685,7 @@ class Component extends DCLogic {
         'Procurar o veterinário imediatamente ao notar dor, relutância em se mover ou fraqueza nas patas.'
       ],
       termos: [
-        { termo: 'Afixo', texto: 'É o nome oficial do canil registrado na entidade cinófila. Todo cão nascido aqui carrega o afixo DKM no nome de registro — é a assinatura do criador, e ela responde pelo que produz.' },
+        { termo: 'Afixo', texto: 'É o nome oficial do canil registrado na entidade cinófila. Todo cão nascido aqui carrega o afixo DKM no nome de registro: é a assinatura do criador, e ela responde pelo que produz.' },
         { termo: 'Pedigree', texto: 'Certificado genealógico emitido pela CBKC com a ascendência do animal. Não é enfeite: é rastreabilidade de linhagem, base de qualquer trabalho de seleção honesto.' },
         { termo: 'Exposições', texto: 'Nas exposições organizadas por clubes filiados, juízes avaliam os cães frente ao padrão da raça. É onde o criador submete seu trabalho a olhar externo.' },
         { termo: 'Criação responsável', texto: 'Intervalo entre ninhadas, avaliação de saúde dos pais, socialização, entrega com documentação e suporte ao tutor depois da venda. Sem isso, é comércio, não criação.' }
